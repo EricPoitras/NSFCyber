@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Wireframe - Prototype</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      
+    <style>
+        div> .dropdown-toggle{
+            display:inline-block;
+            float:right; 
+        }
+        
+        div a#dropdownMenuLink.btn.btn-outline-light.dropdown-toggle, div.show> a#dropdownMenuLink.btn.btn-outline-light.dropdown-toggle, div .show>.btn-outline-light.dropdown-toggle {
+            color: gray;
+            background-color: white;
+            border-color: white; 
+            box-shadow: none;
+            padding: 0;
+        }
+        
+        div a#dropdownMenuLink.btn.btn-outline-light.dropdown-toggle::after{
+            visibility: hidden;
+        }
+        
+        h4.card-title{
+            display:inline;
+        }
+        
+        div.dropdown.show{
+            display:inline;
+        }
+        
+        ul>li i{
+            float:left;
+            padding-right: 20px;
+        }
+        
+        ul>li h6.patient{
+            padding-left: 0px;
+            text-align: left;
+            
+        }
+        
+        ul>li h6.therapist{
+            text-align: right;
+            padding-right: 0px;
+        }
+        
+        ul>li p{
+            padding-top: 20px;
+        }
+        h4#username{
+            margin-bottom: 0px;
+        }
+        
+    </style>
+      
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        
+        <a class="navbar-brand" href="#"><img src="" width="30" height="30" class="d-inline-block align-top" alt="">U4U</a>
+        <!--
+        <form class="form-inline ml-auto mr-3">
+            <input style="width: 300px" class="form-control" type="search" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
+            <span class="input-group-addon" id="basic-addon2"><i class="fa fa-search p-1" aria-hidden="true"></i></span>
+        </form>
+        
+        <button type="button" class="btn btn-primary mr-5 pl-3
+                                     pr-3">New</button>
+        -->
+        <h4 id="username" class="ml-auto mr-2">Eric Poitras</h4>
+        
+        <i class="fa fa-user-circle-o fa-2x mr-2" aria-hidden="true"></i>
+        
+        <a class="btn btn-outline-primary ml-3 pl-2 pr-2 pt-1 pb-1" href="#">
+            <i class="fa fa-sign-in fa-2x" aria-hidden="true"></i>
+        </a>
+        
+    </nav>
+    
+    <div class="container-fluid">
+      
+      <div class="row" style="height:90vh; padding-top:25px; margin-bottom: 500px;">
+          
+        <div class="col-3">
+          <div class="card">
+              <div class="card-body">
+                <div class="d-flex flex-row">
+                    <div><h4 class="card-title">Clients</h4></div>
+                    <div class="dropdown show ml-auto">
+                      <a class="btn btn-outline-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-angle-down fa-2x" aria-hidden="true"></i>
+                      </a>
+
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="#">Online</a>
+                        <a class="dropdown-item" href="#">Offline</a>
+                      </div>
+                    </div>
+                </div>
+                 
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <div class="d-flex flex-row">
+                      <div class=""><i class="fa fa-user-o fa-3x" aria-hidden="true"></i></div>
+                      <div class="pt-2"><h5>John Doe 1</h5></div>
+                      <div class="p-1 ml-auto"><i style="margin-left: 10px;" class="p-0 fa fa-exclamation" aria-hidden="true"></i></div>
+                      <div class="p-1"><i style="margin-left: 10px" class="p-0 fa fa-comment-o" aria-hidden="true"></i></div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex flex-row">
+                      <div class=""><i class="fa fa-user-o fa-3x" aria-hidden="true"></i></div>
+                      <div class="pt-2"><h5>John Doe 2</h5></div>
+                      <div class="p-1 ml-auto"><i style="margin-left: 10px" class="p-0 fa fa-exclamation" aria-hidden="true"></i></div>
+                      <div class="p-1"><i style="margin-left: 10px" class="p-0 fa fa-comment-o" aria-hidden="true"></i></div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex flex-row">
+                      <div class=""><i class="fa fa-user-o fa-3x" aria-hidden="true"></i></div>
+                      <div class="pt-2"><h5>John Doe 3</h5></div>
+                      <div class="p-1 ml-auto"><i style="margin-left: 10px" class="p-0 fa fa-exclamation" aria-hidden="true"></i></div>
+                      <div class="p-1"><i style="margin-left: 10px" class="p-0 fa fa-comment-o" aria-hidden="true"></i></div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex flex-row">
+                      <div class=""><i class="fa fa-user-o fa-3x" aria-hidden="true"></i></div>
+                      <div class="pt-2"><h5>John Doe 4</h5></div>
+                      <div class="p-1 ml-auto"><i style="margin-left: 10px" class="p-0 fa fa-exclamation" aria-hidden="true"></i></div>
+                      <div class="p-1"><i style="margin-left: 10px" class="p-0 fa fa-comment-o" aria-hidden="true"></i></div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex flex-row">
+                      <div class=""><i class="fa fa-user-o fa-3x" aria-hidden="true"></i></div>
+                      <div class="pt-2"><h5>John Doe 5</h5></div>
+                      <div class="p-1 ml-auto"><!--<i style="margin-left: 10px" class="p-0 fa fa-exclamation" aria-hidden="true"></i>--></div>
+                      <div class="p-1"><i style="margin-left: 10px" class="p-0 fa fa-comment-o" aria-hidden="true"></i></div>
+                    </div>
+                </li>
+              </ul>
+              <div class="card-body">
+                <a href="#" class="card-link">Show More</a>
+              </div>
+            </div>
+            
+            <div style="margin-top:25px" class="card">
+              <div class="card-body">
+                <div class="d-flex flex-row">
+                    <div><h4 class="card-title">Community</h4></div>
+                    <div class="dropdown show ml-auto">
+                      <a class="btn btn-outline-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-angle-down fa-2x" aria-hidden="true"></i>
+                      </a>
+
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="#">Online</a>
+                        <a class="dropdown-item" href="#">Offline</a>
+                         <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Counselor</a>
+                        <a class="dropdown-item" href="#">Listener</a>
+                      </div>
+                    </div>
+                </div>
+                 
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <div class="d-flex flex-row">
+                      <div class=""><i class="fa fa-user-o fa-3x" aria-hidden="true"></i></div>
+                      <div class="pt-2"><h5>John Doe 6</h5></div>
+                      <div class="p-1 ml-auto"><i style="margin-left: 10px" class="p-0 fa fa-paper-plane-o" aria-hidden="true"></i></div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex flex-row">
+                      <div class=""><i class="fa fa-user-o fa-3x" aria-hidden="true"></i></div>
+                      <div class="pt-2"><h5>John Doe 7</h5></div>
+                      <div class="p-1 ml-auto"><i style="margin-left: 10px" class="p-0 fa fa-paper-plane-o" aria-hidden="true"></i></div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex flex-row">
+                      <div class=""><i class="fa fa-user-o fa-3x" aria-hidden="true"></i></div>
+                      <div class="pt-2"><h5>John Doe 8</h5></div>
+                      <div class="p-1 ml-auto"><i style="margin-left: 10px" class="p-0 fa fa-paper-plane-o" aria-hidden="true"></i></div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex flex-row">
+                      <div class=""><i class="fa fa-user-o fa-3x" aria-hidden="true"></i></div>
+                      <div class="pt-2"><h5>John Doe 9</h5></div>
+                      <div class="p-1 ml-auto"><i style="margin-left: 10px" class="p-0 fa fa-paper-plane-o" aria-hidden="true"></i></div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex flex-row">
+                      <div class=""><i class="fa fa-user-o fa-3x" aria-hidden="true"></i></div>
+                      <div class="pt-2"><h5>John Doe 10</h5></div>
+                      <div class="p-1 ml-auto"><i style="margin-left: 10px" class="p-0 fa fa-paper-plane-o" aria-hidden="true"></i></div>
+                    </div>
+                </li>
+              </ul>
+              <div class="card-body">
+                <a href="#" class="card-link">Show More</a>
+              </div>
+            </div>
+        </div>
+          
+        <div class="col-6">
+          <div class="card">
+              <div class="card-body">
+                <h4 class="card-title" style="padding-top: 20px">Conversation</h4>
+                <a href="#" class="card-link" style="padding-left: 25px">Show More</a>
+                <form class="form-inline float-right">
+                    <input style="width: 300px" class="form-control" type="search" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
+                    <span class="input-group-addon" id="basic-addon2"><i class="fa fa-search p-1" aria-hidden="true"></i></span>
+                </form>
+              </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" style="padding-top: 50px; padding-bottom: 25px">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col">
+                                    <h6 class="card-subtitle mb-2 text-muted patient">John Doe 5, Sat, Oct 8, 5:10PM</h6>
+                                    <div class="card" style="background-color: #6DBBFF">
+                                      <div class="card-body text-white">
+                                        Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum.
+                                      </div>
+                                      <div class="p-1 ml-auto">
+                                        <i style="margin-left: 10px; color: white" class="fa fa-share-square-o" aria-hidden="true"></i>  
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+
+                                </div>
+                                <div class="col">
+                                     <h6 class="card-subtitle mb-2 text-muted therapist">Therapist, Tuesday, 7:25PM</h6>
+                                     <div class="card">
+                                      <div class="card-body">
+                                        Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum.
+                                      </div>
+                                        <div class="p-1 ml-auto">
+
+                                            <i role="button" id="dropdownMenuLinkComment" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px; color: gray" class="p-0 fa fa-check-square-o dropdown-toggle" aria-hidden="true">
+
+                                              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLinkComment">
+                                                <a class="dropdown-item" href="#">Reflection</a>
+                                                <a class="dropdown-item" href="#">Affirmation</a>
+                                                <a class="dropdown-item" href="#">Refutation</a>
+                                                <a class="dropdown-item" href="#">Summary</a>
+                                                <a class="dropdown-item" href="#">Open Question</a>
+                                                <a class="dropdown-item" href="#">Close Question</a>
+                                              </div>
+
+                                            </i><i style="margin-left: 10px; color: green" class="p-0 fa fa-smile-o" aria-hidden="true"></i><i style="margin-left: 10px; color: orange" class="p-0 fa fa-meh-o" aria-hidden="true"></i><i style="margin-left: 10px; margin-right: 10px; color: red" class="p-0 fa fa-frown-o" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <h6 class="card-subtitle mb-2 text-muted patient">John Doe 5, Sat, Oct 10, 1:40PM</h6>
+                                    <div class="card"  style="background-color: #6DBBFF">
+                                      <div class="card-body text-white">
+                                        Bla Bla Bla
+                                      </div>
+                                      <div class="p-1 ml-auto">
+                                        <i style="margin-left: 10px; color: white" class="fa fa-share-square-o" aria-hidden="true"></i>  
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+
+                                </div>
+                            </div>
+                        </div> 
+                    </li>
+                    <li class="list-group-item" style="padding-top: 25px">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="What would you like to say?"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <button type="button" class="float-right btn btn-primary pl-3 pr-3">Talk</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="card" style="margin-top: 25px; margin-bottom: 25px">
+              <div class="card-body">
+                <div class="d-flex flex-row">
+                <div><h4 class="card-title">Responses</h4></div>
+                
+                <div class="dropdown show ml-auto">
+                  <!--<a class="btn btn-outline-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-angle-down fa-2x" aria-hidden="true"></i>
+                  </a>
+
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>-->
+                    
+                </div>
+                </div>  
+              </div>
+                
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+              <ol style="bottom:-25%;" class="carousel-indicators">
+                <li style="background-color:lightgray;" data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li style="background-color:lightgray;" data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li style="background-color:lightgray;" data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              </ol>
+              <div style="margin-bottom:50px;" class="carousel-inner">
+                <div class="carousel-item active">
+                    <div style="margin-left:100px;margin-right:100px;" class="card">
+                        <div class="card-body">
+                            <div class="d-flex flex-row">
+                                <p>Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum.</p>
+                            </div>
+                            <div class="d-flex flex-row">
+                                <div class="p-1 ml-auto">
+                                    <i style="margin-left: 10px; color: green" class="p-0 fa fa-smile-o" aria-hidden="true"></i><i style="margin-left: 10px; color: orange" class="p-0 fa fa-meh-o" aria-hidden="true"></i><i style="margin-left: 10px; margin-right: 10px; color: red" class="p-0 fa fa-frown-o" aria-hidden="true"></i>
+                                    <i role="button" id="dropdownMenuLinkRating1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px; color: gray" class="p-0 fa fa-check-square-o dropdown-toggle" aria-hidden="true"></i>
+
+                                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLinkRating1">
+                                        <a class="dropdown-item" href="#">Reflection</a>
+                                        <a class="dropdown-item" href="#">Affirmation</a>
+                                        <a class="dropdown-item" href="#">Refutation</a>
+                                        <a class="dropdown-item" href="#">Summary</a>
+                                        <a class="dropdown-item" href="#">Open Question</a>
+                                        <a class="dropdown-item" href="#">Close Question</a>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div style="margin-left:100px;margin-right:100px;" class="card">
+                        <div class="card-body">
+                            <div class="d-flex flex-row">
+                                <p>Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum.</p>
+                            </div>
+                            <div class="d-flex flex-row">
+                                <div class="p-1 ml-auto">
+                                    <i style="margin-left: 10px; color: green" class="p-0 fa fa-smile-o" aria-hidden="true"></i><i style="margin-left: 10px; color: orange" class="p-0 fa fa-meh-o" aria-hidden="true"></i><i style="margin-left: 10px; margin-right: 10px; color: red" class="p-0 fa fa-frown-o" aria-hidden="true"></i>
+                                    <i role="button" id="dropdownMenuLinkRating1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px; color: gray" class="p-0 fa fa-check-square-o dropdown-toggle" aria-hidden="true"></i>
+
+                                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLinkRating1">
+                                        <a class="dropdown-item" href="#">Reflection</a>
+                                        <a class="dropdown-item" href="#">Affirmation</a>
+                                        <a class="dropdown-item" href="#">Refutation</a>
+                                        <a class="dropdown-item" href="#">Summary</a>
+                                        <a class="dropdown-item" href="#">Open Question</a>
+                                        <a class="dropdown-item" href="#">Close Question</a>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div style="margin-left:100px;margin-right:100px;" class="card">
+                        <div class="card-body">
+                            <div class="d-flex flex-row">
+                                <p>Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum.</p>
+                            </div>
+                            <div class="d-flex flex-row">
+                                <div class="p-1 ml-auto">
+                                    <i style="margin-left: 10px; color: green" class="p-0 fa fa-smile-o" aria-hidden="true"></i><i style="margin-left: 10px; color: orange" class="p-0 fa fa-meh-o" aria-hidden="true"></i><i style="margin-left: 10px; margin-right: 10px; color: red" class="p-0 fa fa-frown-o" aria-hidden="true"></i>
+                                    <i role="button" id="dropdownMenuLinkRating1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px; color: gray" class="p-0 fa fa-check-square-o dropdown-toggle" aria-hidden="true"></i>
+
+                                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLinkRating1">
+                                        <a class="dropdown-item" href="#">Reflection</a>
+                                        <a class="dropdown-item" href="#">Affirmation</a>
+                                        <a class="dropdown-item" href="#">Refutation</a>
+                                        <a class="dropdown-item" href="#">Summary</a>
+                                        <a class="dropdown-item" href="#">Open Question</a>
+                                        <a class="dropdown-item" href="#">Close Question</a>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <a style="color: gray;" class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>  
+                </span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a style="color: gray;" class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>  
+                </span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+                    
+            </li>
+            </ul>
+            <!-- Horizontal List of Potential Responses
+
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <div class="d-flex flex-row">
+                        <p>Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum.</p>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <div class="p-1 ml-auto">
+                            <i style="margin-left: 10px; color: green" class="p-0 fa fa-smile-o" aria-hidden="true"></i><i style="margin-left: 10px; color: orange" class="p-0 fa fa-meh-o" aria-hidden="true"></i><i style="margin-left: 10px; margin-right: 10px; color: red" class="p-0 fa fa-frown-o" aria-hidden="true"></i>
+                            <i role="button" id="dropdownMenuLinkRating1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px; color: gray" class="p-0 fa fa-check-square-o dropdown-toggle" aria-hidden="true"></i>
+
+                              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLinkRating1">
+                                <a class="dropdown-item" href="#">Reflection</a>
+                                <a class="dropdown-item" href="#">Affirmation</a>
+                                <a class="dropdown-item" href="#">Refutation</a>
+                                <a class="dropdown-item" href="#">Summary</a>
+                                <a class="dropdown-item" href="#">Open Question</a>
+                                <a class="dropdown-item" href="#">Close Question</a>
+                              </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    
+                    <div class="d-flex flex-row">
+                        <p>Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum.</p>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <div class="p-1 ml-auto"><i style="margin-left: 10px; color: green" class="p-0 fa fa-smile-o" aria-hidden="true"></i><i style="margin-left: 10px; color: orange" class="p-0 fa fa-meh-o" aria-hidden="true"></i><i style="margin-left: 10px; margin-right: 10px; color: red" class="p-0 fa fa-frown-o" aria-hidden="true"></i>
+                        <i role="button" id="dropdownMenuLinkRating2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px; color: gray" class="p-0 fa fa-check-square-o dropdown-toggle" aria-hidden="true"></i>
+
+                              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLinkRating2">
+                                <a class="dropdown-item" href="#">Reflection</a>
+                                <a class="dropdown-item" href="#">Affirmation</a>
+                                <a class="dropdown-item" href="#">Refutation</a>
+                                <a class="dropdown-item" href="#">Summary</a>
+                                <a class="dropdown-item" href="#">Open Question</a>
+                                <a class="dropdown-item" href="#">Close Question</a>
+                              </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    
+                    <div class="d-flex flex-row">
+                        <p>Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum.</p>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <div class="p-1 ml-auto"><i style="margin-left: 10px; color: green" class="p-0 fa fa-smile-o" aria-hidden="true"></i><i style="margin-left: 10px; color: orange" class="p-0 fa fa-meh-o" aria-hidden="true"></i><i style="margin-left: 10px; margin-right: 10px; color: red" class="p-0 fa fa-frown-o" aria-hidden="true"></i>
+                        <i role="button" id="dropdownMenuLinkRating4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px; color: gray" class="p-0 fa fa-check-square-o dropdown-toggle" aria-hidden="true"></i>
+
+                              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLinkRating4">
+                                <a class="dropdown-item" href="#">Reflection</a>
+                                <a class="dropdown-item" href="#">Affirmation</a>
+                                <a class="dropdown-item" href="#">Refutation</a>
+                                <a class="dropdown-item" href="#">Summary</a>
+                                <a class="dropdown-item" href="#">Open Question</a>
+                                <a class="dropdown-item" href="#">Close Question</a>
+                              </div>
+                        </div>
+                     </div>
+                </li>
+              </ul>
+
+            List of possible responses horizontal format -->
+                
+              <div class="card-body">
+                
+              </div>
+            </div>
+        </div>
+          
+        <div class="col-3">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title" style="padding-top: 20px">John Doe 5</h4>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" style="padding-top: 5px; padding-bottom: 5px">
+                        <div class="d-flex flex-row">
+                            <div>
+                                <h6>Demographics</h6>
+                                <ul>
+                                    <li>Age: 25</li>
+                                    <li>Gender: M</li>
+                                    <li>Problem: Depression</li>
+                                </ul>
+                            </div>
+                        </div> 
+                    </li>
+                   
+                </ul>
+                <div class="card-body">
+                <a href="#" class="card-link">Show More</a>
+              </div>   
+            </div>
+            
+            <div class="card" style="margin-top:25px">
+              <div class="card-body">
+                <h4 class="card-title" style="padding-top: 20px">Community Consultation</h4>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" style="padding-top: 5px; padding-bottom: 5px">
+                        <div class="d-flex flex-column">
+                            <div class="mt-2">
+                                <div class="card" style="padding: 10px; height: 300px">
+                                    <p>John Doe 6: Bla Bla Bla Bla</p>
+                                    <p>John Doe 7: Bla Bla Bla Bla</p>
+                                </div>
+                            </div>
+                            <!--
+                            <div class="input-group mb-2 mb-sm-0">
+                                <div class="input-group-addon">@</div>
+                                <input class="form-control" type="text" placeholder="John Doe 7" readonly>
+                            </div>
+                            -->
+                            <div class="input-group mb-2 mb-sm-0 mt-2">
+                                <div class="input-group-addon"><i class="fa fa-pencil-square-o p-0" aria-hidden="true"></i></div>
+                                <input class="form-control" type="text" placeholder="Write a comment..." aria-label="Message" aria-describedby="messagetextbox">
+                            </div>
+                            <div>
+                                <button type="button" class="btn btn-primary float-right mt-3 pl-3
+                                     pr-3">Post</button>
+                            </div>
+                        </div> 
+                    </li>
+                   
+                </ul>
+                <div class="card-body">
+                
+              </div>   
+            </div>
+            
+            <div class="card" style="margin-top:25px">
+              <div class="card-body">
+                <h4 class="card-title" style="padding-top: 20px">Resources</h4>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" style="padding-top: 5px; padding-bottom: 5px">
+                        <div class="d-flex flex-row">
+                            <div id="exampleAccordion" data-children=".item">
+                              <div class="item">
+                                <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion1" aria-expanded="true" aria-controls="exampleAccordion1">
+                                  <h6>Resource Label #1</h6>
+                                </a>
+                                <div id="exampleAccordion1" class="collapse show" role="tabpanel">
+                                  <p class="mb-3">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium lorem non vestibulum scelerisque. Proin a vestibulum sem, eget tristique massa. Aliquam lacinia rhoncus nibh quis ornare. <a href="#">Learn More</a>
+                                  </p>  
+                                </div>
+                              </div>
+                              <div class="item">
+                                <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion2" aria-expanded="false" aria-controls="exampleAccordion2">
+                                  <h6>Resource Label #2</h6>
+                                </a>
+                                <div id="exampleAccordion2" class="collapse" role="tabpanel">
+                                  <p class="mb-3">
+                                    Donec at ipsum dignissim, rutrum turpis scelerisque, tristique lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus nec dui turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. <a href="#">Learn More</a>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="item">
+                                <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion3" aria-expanded="false" aria-controls="exampleAccordion3">
+                                  <h6>Resource Label #3</h6>
+                                </a>
+                                <div id="exampleAccordion3" class="collapse" role="tabpanel">
+                                  <p class="mb-3">
+                                    Donec at ipsum dignissim, rutrum turpis scelerisque, tristique lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus nec dui turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. <a href="#">Learn More</a>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="item">
+                                <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion4" aria-expanded="false" aria-controls="exampleAccordion4">
+                                  <h6>Resource Label #4</h6>
+                                </a>
+                                <div id="exampleAccordion4" class="collapse" role="tabpanel">
+                                  <p class="mb-3">
+                                    Donec at ipsum dignissim, rutrum turpis scelerisque, tristique lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus nec dui turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. <a href="#">Learn More</a>
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                        </div> 
+                    </li>
+                   
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Add Resource</a>
+              </div>   
+            </div>
+            
+        </div>
+        </div>
+          
+      </div>
+        
+    </div>
+    
+    <div class="card" style="position:fixed; right:50px; bottom:50px; width: 400px; z-index: 999; background-color: #F7F8FC">
+              <div class="card-body">
+                <h4 class="card-title" style="padding-top: 20px">Message <span style="color: #636365">John Doe 7</span></h4>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" style="padding-top: 5px; padding-bottom: 5px">
+                        <div class="d-flex flex-column">
+                            <div class="mt-2">
+                                <div class="card" style="padding: 10px; height: 300px">
+                                    <p>John Doe 7: Bla Bla Bla Bla</p>
+                                </div>
+                            </div>
+                            <!--
+                            <div class="input-group mb-2 mb-sm-0">
+                                <div class="input-group-addon">@</div>
+                                <input class="form-control" type="text" placeholder="John Doe 7" readonly>
+                            </div>
+                            -->
+                            <div class="input-group mb-2 mb-sm-0 mt-2">
+                                <div class="input-group-addon"><i class="fa fa-paper-plane-o p-0" aria-hidden="true"></i></div>
+                                <input class="form-control" type="text" placeholder="Send a message..." aria-label="Message" aria-describedby="messagetextbox">
+                            </div>
+                            <div>
+                                <button type="button" class="btn btn-primary float-right mt-3 pl-3
+                                     pr-3">Send</button>
+                            </div>
+                        </div> 
+                    </li>
+                   
+                </ul>
+                <div class="card-body">
+                
+              </div>   
+            </div>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </body>
+</html>
