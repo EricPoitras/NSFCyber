@@ -19,58 +19,20 @@
       <script src="js/nsfchat.js"></script>
       <script src="js/ephelpers.js"></script>
       <script>
-          $(document).ready(function(){ init();});
+          
+      $(document).ready(function(){ init();});
 
-          function init(){
-              $('.popovercus').popover({
-                  container: 'body'
-              })
+      function init(){
+          $('.popovercus').popover({
+              container: 'body'
+          })
 
+      nsfchat.addPageEventListeners();
 
-              nsfchat.addPageEventListeners();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          }
-
-
-
-
-
-
-
-
-
-
-
+      }
 
       </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
   </head>
-
 
   <body>
       
@@ -101,8 +63,8 @@
                       </a>
 
                       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="#">Online</a>
-                        <a class="dropdown-item" href="#">Offline</a>
+                        <a id="filterOnlineClient" class="dropdown-item" href="#">Online</a>
+                        <a id="filterOfflineClient" class="dropdown-item" href="#">Offline</a>
                       </div>
                     </div>
                 </div>
@@ -112,45 +74,45 @@
                     <div class="d-flex flex-row">
                       <div class=""><i class="fa fa-user-o fa-3x" aria-hidden="true"></i></div>
                       <div class="pt-2"><h5>John Doe 1</h5></div>
-                      <div class="p-1 ml-auto"><i class="p-0 fa fa-exclamation listitemcus" aria-hidden="true"></i></div>
-                      <div class="p-1"><i class="p-0 fa fa-comment-o listitemcus" aria-hidden="true"></i></div>
+                      <div class="p-1 ml-auto"><a id="clickNotice1" href="#"><i class="p-0 fa fa-exclamation listitemcus" aria-hidden="true"></i></a></div>
+                        <div class="p-1"><a id="clickConversation1" href="#"><i class="p-0 fa fa-comment-o listitemcus" aria-hidden="true"></i></a></div>
                     </div>
                 </li>
                 <li class="list-group-item">
                     <div class="d-flex flex-row">
                       <div class=""><i class="fa fa-user-o fa-3x" aria-hidden="true"></i></div>
                       <div class="pt-2"><h5>John Doe 2</h5></div>
-                      <div class="p-1 ml-auto"><i class="p-0 fa fa-exclamation listitemcus" aria-hidden="true"></i></div>
-                      <div class="p-1"><i class="p-0 fa fa-comment-o listitemcus" aria-hidden="true"></i></div>
+                        <div class="p-1 ml-auto"><a id="clickNotice2" href="#"><i class="p-0 fa fa-exclamation listitemcus" aria-hidden="true"></i></a></div>
+                        <div class="p-1"><a id="clickConversation2" href="#"><i class="p-0 fa fa-comment-o listitemcus" aria-hidden="true"></i></a></div>
                     </div>
                 </li>
                 <li class="list-group-item">
                     <div class="d-flex flex-row">
                       <div class=""><i class="fa fa-user-o fa-3x" aria-hidden="true"></i></div>
                       <div class="pt-2"><h5>John Doe 3</h5></div>
-                      <div class="p-1 ml-auto"><i class="p-0 fa fa-exclamation listitemcus" aria-hidden="true"></i></div>
-                      <div class="p-1"><i class="p-0 fa fa-comment-o listitemcus" aria-hidden="true"></i></div>
+                        <div class="p-1 ml-auto"><a id="clickNotice3" href="#"><i class="p-0 fa fa-exclamation listitemcus" aria-hidden="true"></i></a></div>
+                        <div class="p-1"><a id="clickConversation3" href="#"><i class="p-0 fa fa-comment-o listitemcus" aria-hidden="true"></i></a></div>
                     </div>
                 </li>
                 <li class="list-group-item">
                     <div class="d-flex flex-row">
                       <div class=""><i class="fa fa-user-o fa-3x" aria-hidden="true"></i></div>
                       <div class="pt-2"><h5>John Doe 4</h5></div>
-                      <div class="p-1 ml-auto"><i class="p-0 fa fa-exclamation listitemcus" aria-hidden="true"></i></div>
-                      <div class="p-1"><i class="p-0 fa fa-comment-o listitemcus" aria-hidden="true"></i></div>
+                        <div class="p-1 ml-auto"><a id="clickNotice4" href="#"><i class="p-0 fa fa-exclamation listitemcus" aria-hidden="true"></i></a></div>
+                        <div class="p-1"><a id="clickConversation4" href="#"><i class="p-0 fa fa-comment-o listitemcus" aria-hidden="true"></i></a></div>
                     </div>
                 </li>
                 <li class="list-group-item">
                     <div class="d-flex flex-row">
                       <div class=""><i class="fa fa-user-o fa-3x" aria-hidden="true"></i></div>
                       <div class="pt-2"><h5>John Doe 5</h5></div>
-                      <div class="p-1 ml-auto"><i class="p-0 fa fa-exclamation listitemcus" aria-hidden="true"></i></div>
-                      <div class="p-1"><i class="p-0 fa fa-comment-o listitemcus" aria-hidden="true"></i></div>
+                        <div class="p-1 ml-auto"><a id="clickNotice5" href="#"><i class="p-0 fa fa-exclamation listitemcus" aria-hidden="true"></i></a></div>
+                        <div class="p-1"><a id="clickConversation5" href="#"><i class="p-0 fa fa-comment-o listitemcus" aria-hidden="true"></i></a></div>
                     </div>
                 </li>
               </ul>
               <div class="card-body">
-                <a href="#" class="card-link">Show More</a>
+                <a id="showMoreClient" href="#" class="card-link">Show More</a>
               </div>
             </div>
             
@@ -164,11 +126,11 @@
                         <i class="fa fa-angle-down fa-2x" aria-hidden="true"></i>
                       </a>
                       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="#">Online</a>
-                        <a class="dropdown-item" href="#">Offline</a>
+                        <a id="filterOnlineCommunity" class="dropdown-item" href="#">Online</a>
+                        <a id="filterOfflineCommunity" class="dropdown-item" href="#">Offline</a>
                          <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Counselor</a>
-                        <a class="dropdown-item" href="#">Listener</a>
+                        <a id="filterCounselorCommunity" class="dropdown-item" href="#">Counselor</a>
+                        <a id="filterListenerCommunity" class="dropdown-item" href="#">Listener</a>
                       </div>
                     </div>
                 </div>
@@ -178,40 +140,40 @@
                     <div class="d-flex flex-row">
                       <div class=""><i class="fa fa-user-o fa-3x" aria-hidden="true"></i></div>
                       <div class="pt-2"><h5>John Doe 6</h5></div>
-                      <div class="p-1 ml-auto"><i class="p-0 fa fa-paper-plane-o listitemcus" aria-hidden="true"></i></div>
+                      <div class="p-1 ml-auto"><a id="clickMessage1" href="#"><i class="p-0 fa fa-paper-plane-o listitemcus" aria-hidden="true"></i></a></div>
                     </div>
                 </li>
                 <li class="list-group-item">
                     <div class="d-flex flex-row">
                       <div class=""><i class="fa fa-user-o fa-3x" aria-hidden="true"></i></div>
                       <div class="pt-2"><h5>John Doe 7</h5></div>
-                      <div class="p-1 ml-auto"><i class="p-0 fa fa-paper-plane-o listitemcus" aria-hidden="true"></i></div>
+                        <div class="p-1 ml-auto"><a id="clickMessage2" href="#"><i class="p-0 fa fa-paper-plane-o listitemcus" aria-hidden="true"></i></a></div>
                     </div>
                 </li>
                 <li class="list-group-item">
                     <div class="d-flex flex-row">
                       <div class=""><i class="fa fa-user-o fa-3x" aria-hidden="true"></i></div>
                       <div class="pt-2"><h5>John Doe 8</h5></div>
-                      <div class="p-1 ml-auto"><i class="p-0 fa fa-paper-plane-o listitemcus" aria-hidden="true"></i></div>
+                        <div class="p-1 ml-auto"><a id="clickMessage3" href="#"><i class="p-0 fa fa-paper-plane-o listitemcus" aria-hidden="true"></i></a></div>
                     </div>
                 </li>
                 <li class="list-group-item">
                     <div class="d-flex flex-row">
                       <div class=""><i class="fa fa-user-o fa-3x" aria-hidden="true"></i></div>
                       <div class="pt-2"><h5>John Doe 9</h5></div>
-                      <div class="p-1 ml-auto"><i class="p-0 fa fa-paper-plane-o listitemcus" aria-hidden="true"></i></div>
+                        <div class="p-1 ml-auto"><a id="clickMessage4" href="#"><i class="p-0 fa fa-paper-plane-o listitemcus" aria-hidden="true"></i></a></div>
                     </div>
                 </li>
                 <li class="list-group-item">
                     <div class="d-flex flex-row">
                       <div class=""><i class="fa fa-user-o fa-3x" aria-hidden="true"></i></div>
                       <div class="pt-2"><h5>John Doe 10</h5></div>
-                      <div class="p-1 ml-auto"><i class="p-0 fa fa-paper-plane-o listitemcus" aria-hidden="true"></i></div>
+                        <div class="p-1 ml-auto"><a id="clickMessage5" href="#"><i class="p-0 fa fa-paper-plane-o listitemcus" aria-hidden="true"></i></a></div>
                     </div>
                 </li>
               </ul>
               <div class="card-body">
-                <a href="#" class="card-link">Show More</a>
+                <a id="showMoreCommunity" href="#" class="card-link">Show More</a>
               </div>
             </div>
         </div>
@@ -223,11 +185,16 @@
           <div class="card">
               <div class="card-body conversationhead">
                 <h4 class="card-title">Conversation</h4>
-                <a href="#" class="card-link">Show More</a>
-                <form class="form-inline float-right">
+                <a id="showMoreConversation" href="#" class="card-link">Show More</a>
+                <label class="sr-only" for="inlineFormInputGroup">Search</label>
+                  <div class="float-right input-group w-50 mb-2 mr-sm-2 mb-sm-0">
+                      <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Search">
+                      <div id="submitSearch" class="input-group-addon"><i class="fa fa-search p-1" aria-hidden="true"></i></div>
+                  </div>
+                <!--<form class="form-inline float-right">
                     <input class="form-control" type="search" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
                     <span class="input-group-addon" id="basic-addon2"><i class="fa fa-search p-1" aria-hidden="true"></i></span>
-                </form>
+                </form>-->
               </div>
                 <ul class="list-group list-group-flush">
                     <li  class="list-group-item conversationarea">
@@ -271,17 +238,20 @@
                                                 <a class="dropdown-item" href="#">Close Question</a>
                                               </div>
 
-                                            </i><i class="p-0 fa fa-smile-o" aria-hidden="true"></i>
+                                            </i>
+                                            <i class="p-0 fa fa-smile-o" aria-hidden="true"></i>
                                             <i class="p-0 fa fa-meh-o" aria-hidden="true"></i>
                                             <i class="p-0 fa fa-frown-o" aria-hidden="true"></i>
                                         </div>
                                          <ul class="list-group list-group-flush">
-                                            <li class="list-group-item">
+                                             <li class="list-group-item">
+                                                <div class="card-link"><a href="#"><i class="fa fa-users" aria-hidden="true"></i></a></div> 
+                                             </li>
+                                            <li class="list-group-item bg-fadedcus">
                                                 <div>My own response bla bla bla bla bla bla bla <button type="button" class="btn btn-primary p-0 popovercus" data-container="body" data-toggle="popover" data-placement="top" title="MI Wizard" data-content="MI Wizard confidence level at 75%"><i class="fa fa-magic fa-fw p-1" aria-hidden="true"></i>&nbsp; Reflection</button></div>
                                             </li>
-                                             <li class="list-group-item">
-                                                 <div class="card-link"><i class="fa fa-user" aria-hidden="true"></i></div>
-                                                <div class="card-link"><i class="fa fa-users" aria-hidden="true"></i></div> 
+                                             <li class="list-group-item bg-fadedcus">
+                                                 <div class="card-link"><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></div> 
                                              </li>
                                           </ul>
                                     </div>
@@ -472,7 +442,7 @@
                     </li>
                 </ul>
                 <div class="card-body">
-                <a href="#" class="card-link">Show More</a>
+                <a id="showMoreDemographic" href="#" class="card-link">Show More</a>
               </div>   
             </div>
             
@@ -520,7 +490,7 @@
                     <!-- Add responses rated by community here-->
                 </ul>
                 <div class="card-body">
-                    <a href="#" class="card-link">Show More</a>
+                    <a id="showMoreResponses" href="#" class="card-link">Show More</a>
                 </div>
             </div>
             
@@ -610,7 +580,7 @@
                    
                 </ul>
                 <div class="card-body">
-                    <a href="#" class="card-link">Add Resource</a>
+                    <!--<a href="#" class="card-link">Add Resource</a>-->
               </div>   
             </div>
             
@@ -622,7 +592,7 @@
     </div>
     
     <!-- Chat Window (Appears on Top of Elements) -->
-    <div class="card chatwindowarea invisible">
+    <div class="card chatwindowarea">
         <div class="card-body">
             <h4 class="card-title">Message <span>John Doe 7</span></h4>
         </div>
@@ -639,7 +609,7 @@
                             <input class="form-control" type="text" placeholder="Send a message..." aria-label="Message" aria-describedby="messagetextbox">
                         </div>
                         <div>
-                            <button type="button" class="btn btn-primary float-right mt-3 pl-3
+                            <button id="submitNewMessage" type="button" class="btn btn-primary float-right mt-3 pl-3
                                  pr-3">Send</button>
                         </div>
                     </div> 
