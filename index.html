@@ -18,6 +18,8 @@
       <script src="js/bootstrap.min.js"></script>
       <script src="js/nsfchat.js"></script>
       <script src="js/ephelpers.js"></script>
+      <script src="js/loader.js"></script>
+
       <script>
           
       $(document).ready(function(){ init();});
@@ -31,6 +33,89 @@
 
       }
 
+      </script>
+      
+      <script>
+          // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart1);
+      google.charts.setOnLoadCallback(drawChart2);
+      google.charts.setOnLoadCallback(drawChart3);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart1() {
+
+        // Create the data table.
+        var data1 = new google.visualization.DataTable();
+        data1.addColumn('string', 'Adherence');
+        data1.addColumn('number', 'Percentage');
+        data1.addColumn({type: 'string', role: 'tooltip'});
+        data1.addRows([
+          ['MI Adherence', 3, 'Talk turns classified \n as MI compliant \n strategies and techniques'],
+          ['MI Non Adherence', 0, 'Talk turns classified \n as confront, adivse, \n or direct']
+        ]);
+
+        // Set chart options
+        var options1 = {'width':100,
+                       'height':100,
+                       colors:['#007bff','lightgray'],
+                       legend:'none'};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart1_div'));
+        chart.draw(data1, options1);
+      }
+          
+      function drawChart2() {
+
+        // Create the data table.
+        var data2 = new google.visualization.DataTable();
+        data2.addColumn('string', 'OpenQuestions');
+        data2.addColumn('number', 'Percentage');
+        data2.addColumn({type: 'string', role: 'tooltip'});
+        data2.addRows([
+          ['Open Questions', 0, 'Talk turns classified \n as open questions'],
+          ['Other', 3, 'Talk turns classified \n other MI skill']
+        ]);
+
+        // Set chart options
+        var options2 = {'width':100,
+                       'height':100,
+                       colors:['#007bff','lightgray'],
+                       legend:'none'};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart2_div'));
+        chart.draw(data2, options2);
+      }
+          
+      function drawChart3() {
+
+        // Create the data table.
+        var data3 = new google.visualization.DataTable();
+        data3.addColumn('string', 'Complex Reflections');
+        data3.addColumn('number', 'Percentage');
+        data3.addColumn({type: 'string', role: 'tooltip'});
+        data3.addRows([
+          ['Complex Reflections', 3, 'Talk turns classified \n as complex reflection'],
+          ['Other', 0, 'Talk turns classified \n other MI skill']
+        ]);
+
+        // Set chart options
+        var options3 = {'width':100,
+                       'height':100,
+                       colors:['#007bff','lightgray'],
+                       legend:'none'};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart3_div'));
+        chart.draw(data3, options3);
+      }
+          
       </script>
   </head>
 
@@ -273,6 +358,106 @@
 
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col">
+
+                                </div>
+                                <div class="col">
+                                     <h6 class="card-subtitle mb-2 text-muted therapist">Therapist, Tuesday, 7:25PM</h6>
+                                     <div class="card therapist">
+                                      <div class="card-body">
+                                        Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum.
+                                      </div>
+                                        <div class="p-1 ml-auto">
+
+                                            <i role="button" id="dropdownMenuLinkComment" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 fa fa-check-square-o dropdown-toggle" aria-hidden="true">
+
+                                              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLinkComment">
+                                                <a class="dropdown-item" href="#">Reflection</a>
+                                                <a class="dropdown-item" href="#">Affirmation</a>
+                                                <a class="dropdown-item" href="#">Refutation</a>
+                                                <a class="dropdown-item" href="#">Summary</a>
+                                                <a class="dropdown-item" href="#">Open Question</a>
+                                                <a class="dropdown-item" href="#">Close Question</a>
+                                              </div>
+
+                                            </i>
+                                            <i class="p-0 fa fa-smile-o" aria-hidden="true"></i>
+                                            <i class="p-0 fa fa-meh-o" aria-hidden="true"></i>
+                                            <i class="p-0 fa fa-frown-o" aria-hidden="true"></i>
+                                        </div>
+                                         <ul class="list-group list-group-flush">
+                                             <li class="list-group-item">
+                                                <div class="card-link"><a href="#"><i class="fa fa-users" aria-hidden="true"></i></a></div> 
+                                             </li>
+                                            <li class="list-group-item bg-fadedcus">
+                                                <div>My own response bla bla bla bla bla bla bla <button type="button" class="btn btn-primary p-0 popovercus" data-container="body" data-toggle="popover" data-placement="top" title="MI Wizard" data-content="MI Wizard confidence level at 75%"><i class="fa fa-magic fa-fw p-1" aria-hidden="true"></i>&nbsp; Reflection</button></div>
+                                            </li>
+                                             <li class="list-group-item bg-fadedcus">
+                                                 <div class="card-link"><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></div> 
+                                             </li>
+                                          </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <h6 class="card-subtitle mb-2 text-muted patient">John Doe 5, Sat, Oct 10, 1:40PM</h6>
+                                    <div class="card client">
+                                      <div class="card-body text-white">
+                                        Bla Bla Bla
+                                      </div>
+                                      <div class="p-1 ml-auto">
+                                        <i class="fa fa-share-square-o" aria-hidden="true"></i>  
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+
+                                </div>
+                                <div class="col">
+                                     <h6 class="card-subtitle mb-2 text-muted therapist">Therapist, Tuesday, 7:25PM</h6>
+                                     <div class="card therapist">
+                                      <div class="card-body">
+                                        Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum.
+                                      </div>
+                                        <div class="p-1 ml-auto">
+
+                                            <i role="button" id="dropdownMenuLinkComment" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 fa fa-check-square-o dropdown-toggle" aria-hidden="true">
+
+                                              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLinkComment">
+                                                <a class="dropdown-item" href="#">Reflection</a>
+                                                <a class="dropdown-item" href="#">Affirmation</a>
+                                                <a class="dropdown-item" href="#">Refutation</a>
+                                                <a class="dropdown-item" href="#">Summary</a>
+                                                <a class="dropdown-item" href="#">Open Question</a>
+                                                <a class="dropdown-item" href="#">Close Question</a>
+                                              </div>
+
+                                            </i>
+                                            <i class="p-0 fa fa-smile-o" aria-hidden="true"></i>
+                                            <i class="p-0 fa fa-meh-o" aria-hidden="true"></i>
+                                            <i class="p-0 fa fa-frown-o" aria-hidden="true"></i>
+                                        </div>
+                                         <ul class="list-group list-group-flush">
+                                             <li class="list-group-item">
+                                                <div class="card-link"><a href="#"><i class="fa fa-users" aria-hidden="true"></i></a></div> 
+                                             </li>
+                                            <li class="list-group-item bg-fadedcus">
+                                                <div>My own response bla bla bla bla bla bla bla <button type="button" class="btn btn-primary p-0 popovercus" data-container="body" data-toggle="popover" data-placement="top" title="MI Wizard" data-content="MI Wizard confidence level at 75%"><i class="fa fa-magic fa-fw p-1" aria-hidden="true"></i>&nbsp; Reflection</button></div>
+                                            </li>
+                                             <li class="list-group-item bg-fadedcus">
+                                                 <div class="card-link"><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></div> 
+                                             </li>
+                                          </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div> 
                     </li>
                     <li class="list-group-item conversationfooter">
@@ -294,7 +479,7 @@
                 </ul>
             </div>
             
-            <!-- Responses Card -->
+            <!-- Responses Card --> <!--
             <div class="card responsearea">
               <div class="card-body">
                 <div class="d-flex flex-row">
@@ -306,7 +491,7 @@
                 <li class="list-group-item">
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                         
-                      <!-- Carousel Controls -->
+                      
                       <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -315,7 +500,7 @@
                         
                   <div class="carousel-inner">
                       
-                    <!-- First Message -->
+                    
                     <div class="carousel-item active">
                         <div class="card">
                             <div class="card-body">
@@ -341,7 +526,7 @@
                         </div>
                     </div>
                       
-                    <!-- Middle Message -->
+                   
                     <div class="carousel-item">
                         <div class="card">
                             <div class="card-body">
@@ -367,7 +552,7 @@
                         </div>
                     </div>
                       
-                    <!-- Last Message -->
+                   
                     <div class="carousel-item">
                         <div class="card">
                             <div class="card-body">
@@ -416,8 +601,8 @@
               <div class="card-body">
                 
               </div>
-            </div>
-        </div>
+            </div>-->
+        </div> 
         
         <!-- Last Column -->
         <div class="col-3">
@@ -446,6 +631,73 @@
               </div>   
             </div>
             
+            <!-- Analytics Panel -->
+            <div class="card analyticsarea">
+                <div class="card-body">
+                    <h4 class="card-title">MI Fidelity</h4>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="p-1">Overall MI Fidelity</div>
+                            <div class="p-1">
+                                <strong><span id="overallfidelityscore" class="text-primary">3</span>/<span id="countoftherapistmove">3</span></strong>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="p-0 flex-grow">
+                                <div id="chart1_div"></div>
+                            </div>
+                            <div class="p-1">
+                                <div>MI Adherence: <span id="adherencescore">100%</span></div>
+                                <div>MI Non Adherence: <span id="nonadherencescore">0%</span></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="p-1">
+                                <strong><span class="text-primary" id="ratioscore">N/A</span></strong>
+                            </div>
+                            <div class="p-1 flex-grow">
+                                Reflection to Question Ratio
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="p-0 flex-grow">
+                                <div id="chart2_div"></div>
+                            </div>
+                            <div class="p-1">
+                                <div>Percent Open Questions: <span id="openquestionscore">0%</span></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="p-0 flex-grow">
+                                <div id="chart3_div"></div>
+                            </div>
+                            <div class="p-1">
+                                <div>Percent Complex Reflections: <span id="complexreflectscore">100%</span></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="p-1">
+                        
+                        </div>
+                        <strong class="text-primary">MI Wizard: </strong><span id="individualfeedback">Reflections are my jam. Here's a bunch of stuff on them. Bla Bla Bla.</span>
+                    </li>
+                </ul>
+                <div class="card-body">
+                
+                </div>
+            </div>
+            
             <!-- Community Responses Area -->
             <div class="card communityresponsearea">
                 <div class="card-body">
@@ -462,6 +714,25 @@
                             </div>
                             <div class="p-1 text-primary">80%</div>
                         </div>
+                        <div class="d-flex flex-row">
+                            <div class="p-1 ml-auto">
+                                <i role="button" id="dropdownMenuLinkComment" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 fa fa-check-square-o dropdown-toggle" aria-hidden="true">
+
+                                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLinkComment">
+                                    <a class="dropdown-item" href="#">Reflection</a>
+                                    <a class="dropdown-item" href="#">Affirmation</a>
+                                    <a class="dropdown-item" href="#">Refutation</a>
+                                    <a class="dropdown-item" href="#">Summary</a>
+                                    <a class="dropdown-item" href="#">Open Question</a>
+                                    <a class="dropdown-item" href="#">Close Question</a>
+                                  </div>
+
+                                </i>
+                                <i class="p-0 fa fa-smile-o" aria-hidden="true"></i>
+                                <i class="p-0 fa fa-meh-o" aria-hidden="true"></i>
+                                <i class="p-0 fa fa-frown-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
                     </li>
                     
                     <li class="list-group-item">
@@ -474,6 +745,25 @@
                             </div>
                             <div class="p-1 text-primary">70%</div>
                         </div>
+                        <div class="d-flex flex-row">
+                            <div class="p-1 ml-auto">
+                                <i role="button" id="dropdownMenuLinkComment" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 fa fa-check-square-o dropdown-toggle" aria-hidden="true">
+
+                                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLinkComment">
+                                    <a class="dropdown-item" href="#">Reflection</a>
+                                    <a class="dropdown-item" href="#">Affirmation</a>
+                                    <a class="dropdown-item" href="#">Refutation</a>
+                                    <a class="dropdown-item" href="#">Summary</a>
+                                    <a class="dropdown-item" href="#">Open Question</a>
+                                    <a class="dropdown-item" href="#">Close Question</a>
+                                  </div>
+
+                                </i>
+                                <i class="p-0 fa fa-smile-o" aria-hidden="true"></i>
+                                <i class="p-0 fa fa-meh-o" aria-hidden="true"></i>
+                                <i class="p-0 fa fa-frown-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
                     </li>
                     
                     <li class="list-group-item">
@@ -485,6 +775,25 @@
                                 </div>
                             </div>
                             <div class="p-1 text-primary">50%</div>
+                        </div>
+                        <div class="d-flex flex-row">
+                            <div class="p-1 ml-auto">
+                                <i role="button" id="dropdownMenuLinkComment" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 fa fa-check-square-o dropdown-toggle" aria-hidden="true">
+
+                                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLinkComment">
+                                    <a class="dropdown-item" href="#">Reflection</a>
+                                    <a class="dropdown-item" href="#">Affirmation</a>
+                                    <a class="dropdown-item" href="#">Refutation</a>
+                                    <a class="dropdown-item" href="#">Summary</a>
+                                    <a class="dropdown-item" href="#">Open Question</a>
+                                    <a class="dropdown-item" href="#">Close Question</a>
+                                  </div>
+
+                                </i>
+                                <i class="p-0 fa fa-smile-o" aria-hidden="true"></i>
+                                <i class="p-0 fa fa-meh-o" aria-hidden="true"></i>
+                                <i class="p-0 fa fa-frown-o" aria-hidden="true"></i>
+                            </div>
                         </div>
                     </li>
                     <!-- Add responses rated by community here-->
@@ -525,7 +834,7 @@
               </div>   
             </div>
             
-            <!-- Resources Area -->
+            <!-- Resources Area --><!--
             <div class="card resourcesarea">
               <div class="card-body">
                 <h4 class="card-title">Resources</h4>
@@ -582,7 +891,7 @@
                 <div class="card-body">
                     <!--<a href="#" class="card-link">Add Resource</a>-->
               </div>   
-            </div>
+            </div>-->
             
         </div>
         </div>
