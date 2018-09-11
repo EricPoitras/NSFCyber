@@ -81,6 +81,9 @@ h4#username{
 .conversationarea{
     padding-top: 50px; 
     padding-bottom: 25px;
+    height: 775px;
+    max-height: 775px;
+    overflow: scroll;
 }
 
 .conversationarea .client{
@@ -92,22 +95,22 @@ h4#username{
     color: white;
 }
 
-.conversationarea .therapist i.fa-check-square-o, .responsearea i.fa-check-square-o{
+.conversationarea .therapist i.fa-check-square-o, .responsearea i.fa-check-square-o, .communityresponsearea i.fa-check-square-o{
     margin-left: 10px; 
     color: gray;
 }
 
-.conversationarea .therapist i.fa-smile-o, .responsearea i.fa-smile-o{
+.conversationarea .therapist i.fa-smile-o, .responsearea i.fa-smile-o, .communityresponsearea i.fa-smile-o{
     margin-left: 10px; 
     color: green;
 }
 
-.conversationarea .therapist i.fa-meh-o, .responsearea i.fa-meh-o{
+.conversationarea .therapist i.fa-meh-o, .responsearea i.fa-meh-o, .communityresponsearea i.fa-meh-o{
     margin-left: 10px; 
     color: orange;
 }
 
-.conversationarea .therapist i.fa-frown-o, .responsearea i.fa-frown-o{
+.conversationarea .therapist i.fa-frown-o, .responsearea i.fa-frown-o, .communityresponsearea i.fa-frown-o{
     margin-left: 10px; 
     margin-right: 10px; 
     color: red;
@@ -183,6 +186,11 @@ h4#username{
     margin-top:25px;
 }
 
+/* Analytics Area */
+.analyticsarea{
+    margin-top:25px;
+}
+
 /* Resources Area */
 .resourcesarea{
     margin-top:25px;
@@ -200,7 +208,7 @@ h4#username{
 /* Chat Window Area */
 .chatwindowarea{
     position:fixed; 
-    right:50px; 
+    left:50px; 
     bottom:50px; 
     width: 400px; 
     z-index: 999; 
@@ -223,4 +231,10 @@ h4#username{
 .chatwindowarea .list-group-item .card{
     padding: 10px; 
     height: 300px;
+}
+
+/* Graphs */
+
+#chart1_div, #chart2_div, #chart3_div{
+    z-index: 999;
 }
