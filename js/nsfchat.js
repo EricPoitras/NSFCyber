@@ -36,6 +36,34 @@ var nsfchat = {
         var iconmessage3 = getDiv("clickMessage3");
         var iconmessage4 = getDiv("clickMessage4");
         var iconmessage5 = getDiv("clickMessage5");
+        var clickLogin = getDiv("clickLogin");
+        var shareClient1 = getDiv("shareClient1");
+        var shareClient2 = getDiv("shareClient2");
+        var shareClient2 = getDiv("shareClient3");
+        var rateSmileTherapist1 = getDiv("rateSmileTherapist1");
+        var rateMehTherapist1 = getDiv("rateMehTherapist1");
+        var rateFrownTherapist1 = getDiv("rateFrownTherapist1");
+        var rateSmileTherapist2 = getDiv("rateSmileTherapist2");
+        var rateMehTherapist2 = getDiv("rateMehTherapist2");
+        var rateFrownTherapist2 = getDiv("rateFrownTherapist2");
+        var rateSmileTherapist3 = getDiv("rateSmileTherapist3");
+        var rateMehTherapist3 = getDiv("rateMehTherapist3");
+        var rateFrownTherapist3 = getDiv("rateFrownTherapist3");
+        var clickIndFeedback1 = getDiv("clickIndFeedback1");
+        var clickIndFeedback2 = getDiv("clickIndFeedback2");
+        var clickIndFeedback3 = getDiv("clickIndFeedback3");
+        var clickComFeedback1 = getDiv("clickComFeedback1");
+        var clickComFeedback2 = getDiv("clickComFeedback2");
+        var clickComFeedback3 = getDiv("clickComFeedback3");
+        var rateSmileCom1 = getDiv("rateSmileCom1");
+        var rateMehCom1 = getDiv("rateMehCom1");
+        var rateFrownCom1 = getDiv("rateFrownCom1");
+        var rateSmileCom2 = getDiv("rateSmileCom2");
+        var rateMehCom2 = getDiv("rateMehCom2");
+        var rateFrownCom2 = getDiv("rateFrownCom2");
+        var rateSmileCom3 = getDiv("rateSmileCom3");
+        var rateMehCom3 = getDiv("rateMehCom3");
+        var rateFrownCom3 = getDiv("rateFrownCom3");
         
         /* Getting icon click events for conversation panel - should we simply list a certain number to use id to get elements content, but allow the user to move up and down discourse moves in a conversation? */
         /* Getting icon click events for responses panel - maybe use another component other than carousel... show and hide cards */
@@ -188,6 +216,123 @@ var nsfchat = {
         /* Listen for Click on Message Icon 5 */
         iconmessage5.addEventListener("click", function(event){
            nsfchat.LoadDirectMessage5(); 
+        });
+        
+        /* Listen for Click on Login Button */
+        clickLogin.addEventListener("click", function(event){
+           nsfchat.UserLogin(); 
+        });
+        
+        /* Listen for Share Client Message to Community Chat */
+        shareClient1.addEventListener("click", function(event){
+           nsfchat.CopyPasteClient1();
+        });
+        
+        shareClient2.addEventListener("click", function(event){
+           nsfchat.CopyPasteClient2();
+        });
+        
+        shareClient3.addEventListener("click", function(event){
+           nsfchat.CopyPasteClient3();
+        });
+        
+        /* Listen for Ratings of Therapist Response */
+        rateSmileTherapist1.addEventListener("click", function(event){
+            nsfchat.RateSmileTherapist1();
+        });
+        
+        rateSmileTherapist2.addEventListener("click", function(event){
+            nsfchat.RateSmileTherapist2();
+        });
+        
+        rateSmileTherapist3.addEventListener("click", function(event){
+            nsfchat.RateSmileTherapist3();
+        });
+        
+        rateMehTherapist1.addEventListener("click", function(event){
+            nsfchat.RateMehTherapist1();
+        });
+        
+        rateMehTherapist2.addEventListener("click", function(event){
+            nsfchat.RateMehTherapist2();
+        });
+        
+        rateMehTherapist3.addEventListener("click", function(event){
+            nsfchat.RateMehTherapist3();
+        });
+        
+        rateFrownTherapist1.addEventListener("click", function(event){
+            nsfchat.RateFrownTherapist1();
+        });
+        
+        rateFrownTherapist2.addEventListener("click", function(event){
+            nsfchat.RateFrownTherapist2();
+        });
+        
+        rateFrownTherapist3.addEventListener("click", function(event){
+            nsfchat.RateFrownTherapist3();
+        });
+        
+        /* Listen for Feedback Requests */
+        clickIndFeedback1.addEventListener("click", function(event){
+            nsfchat.ClickIndFeedback1();
+        });
+        
+        clickIndFeedback2.addEventListener("click", function(event){
+            nsfchat.ClickIndFeedback2();
+        });
+        
+        clickIndFeedback3.addEventListener("click", function(event){
+            nsfchat.ClickIndFeedback3();
+        });
+        
+        clickComFeedback1.addEventListener("click", function(event){
+            nsfchat.ClickComFeedback1();
+        });
+        
+        clickComFeedback2.addEventListener("click", function(event){
+            nsfchat.ClickComFeedback2();
+        });
+        
+        clickComFeedback3.addEventListener("click", function(event){
+            nsfchat.ClickComFeedback3();
+        });
+        
+        /* Listen for Ratings of Community Responses */
+        rateSmileCom1.addEventListener("click", function(event){
+            nsfchat.RateSmileCom1();
+        });
+        
+        rateSmileCom2.addEventListener("click", function(event){
+            nsfchat.RateSmileCom2();
+        });
+        
+        rateSmileCom3.addEventListener("click", function(event){
+            nsfchat.RateSmileCom3();
+        });
+        
+        rateMehCom1.addEventListener("click", function(event){
+            nsfchat.RateMehCom1();
+        });
+        
+        rateMehCom2.addEventListener("click", function(event){
+            nsfchat.RateMehCom2();
+        });
+        
+        rateMehCom3.addEventListener("click", function(event){
+            nsfchat.RateMehCom3();
+        });
+        
+        rateFrownCom1.addEventListener("click", function(event){
+            nsfchat.RateFrownCom1();
+        });
+        
+        rateFrownCom2.addEventListener("click", function(event){
+            nsfchat.RateFrownCom2();
+        });
+        
+        rateFrownCom3.addEventListener("click", function(event){
+            nsfchat.RateFrownCom3();
         });
         
     },
@@ -388,8 +533,127 @@ var nsfchat = {
     /* Load Direct Message 5 */
     LoadDirectMessage5:function(object){
         
-    }
+    },
     
+    /* Login */
+    UserLogin:function(object){
+        
+    },
+    
+    /* Copy and Paste Client Message in Community Chat */
+    CopyPasteClient1:function(object){
+        
+    },
+    
+    CopyPasteClient2:function(object){
+        
+    },
+    
+    CopyPasteClient3:function(object){
+        
+    },
+    
+    /* Save Rating for Therapist Response */
+    
+    RateSmileTherapist1:function(object){
+        
+    },
+    
+    RateSmileTherapist2:function(object){
+        
+    },
+    
+    RateSmileTherapist3:function(object){
+        
+    },
+    
+    RateMehTherapist1:function(object){
+        
+    },
+    
+    RateMehTherapist2:function(object){
+        
+    },
+    
+    RateMehTherapist3:function(object){
+        
+    },
+    
+    RateFrownTherapist1:function(object){
+        
+    },
+    
+    RateFrownTherapist2:function(object){
+        
+    },
+    
+    RateFrownTherapist3:function(object){
+        
+    },
+    
+    /* Deliver Individual and Community Feedback (NLP and CrowdSource) */
+    
+    clickIndFeedback1:function(object){
+        
+    },
+    
+    clickIndFeedback2:function(object){
+        
+    },
+    
+    clickIndFeedback3:function(object){
+        
+    },
+    
+    clickComFeedback1:function(object){
+        
+    },
+    
+    clickComFeedback2:function(object){
+        
+    },
+    
+    clickComFeedback3:function(object){
+        
+    },
+    
+    /* Save Ratings for Community Responses */
+    
+    RateSmileCom1:function(object){
+        
+    },
+    
+    RateSmileCom2:function(object){
+        
+    },
+    
+    RateSmileCom3:function(object){
+        
+    },
+    
+    RateMehCom1:function(object){
+        
+    },
+    
+    RateMehCom2:function(object){
+        
+    },
+    
+    RateMehCom3:function(object){
+        
+    },
+    
+    RateFrownCom1:function(object){
+        
+    },
+    
+    RateFrownCom2:function(object){
+        
+    },
+    
+    RateFrownCom3:function(object){
+        
+    }
     
 /* End of nsfchat.js */
 };
