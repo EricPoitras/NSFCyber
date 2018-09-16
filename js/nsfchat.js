@@ -64,6 +64,43 @@ var nsfchat = {
         var rateSmileCom3 = getDiv("rateSmileCom3");
         var rateMehCom3 = getDiv("rateMehCom3");
         var rateFrownCom3 = getDiv("rateFrownCom3");
+        var reflectTherapist1 = getDiv("ReflectTherapist1");
+        var affirmTherapist1 = getDiv("AffirmTherapist1");
+        var refuteTherapist1 = getDiv("RefuteTherapist1");
+        var summaryTherapist1 = getDiv("SummaryTherapist1");
+        var openTherapist1 = getDiv("OpenTherapist1");
+        var closeTherapist1 = getDiv("CloseTherapist1");
+        var reflectTherapist2 = getDiv("ReflectTherapist2");
+        var affirmTherapist2 = getDiv("AffirmTherapist2");
+        var refuteTherapist2 = getDiv("RefuteTherapist2");
+        var summaryTherapist2 = getDiv("SummaryTherapist2");
+        var openTherapist2 = getDiv("OpenTherapist2");
+        var closeTherapist2 = getDiv("CloseTherapist2");
+        var reflectTherapist3 = getDiv("ReflectTherapist3");
+        var affirmTherapist3 = getDiv("AffirmTherapist3");
+        var refuteTherapist3 = getDiv("RefuteTherapist3");
+        var summaryTherapist3 = getDiv("SummaryTherapist3");
+        var openTherapist3 = getDiv("OpenTherapist3");
+        var closeTherapist3 = getDiv("CloseTherapist3");
+        var reflectCom1 = getDiv("ReflectCom1");
+        var affirmCom1 = getDiv("AffirmCom1");
+        var refuteCom1 = getDiv("RefuteCom1");
+        var summaryCom1 = getDiv("SummaryCom1");
+        var openCom1 = getDiv("OpenCom1");
+        var closeCom1 = getDiv("CloseCom1");
+        var reflectCom2 = getDiv("ReflectCom2");
+        var affirmCom2 = getDiv("AffirmCom2");
+        var refuteCom2 = getDiv("RefuteCom2");
+        var summaryCom2 = getDiv("SummaryCom2");
+        var openCom2 = getDiv("OpenCom2");
+        var closeCom2 = getDiv("CloseCom2");
+        var reflectCom3 = getDiv("ReflectCom3");
+        var affirmCom3 = getDiv("AffirmCom3");
+        var refuteCom3 = getDiv("RefuteCom3");
+        var summaryCom3 = getDiv("SummaryCom3");
+        var openCom3 = getDiv("OpenCom3");
+        var closeCom3 = getDiv("CloseCom3");
+        var clickCloseDM = getDiv("clickCloseDM");
         
         /* Getting icon click events for conversation panel - should we simply list a certain number to use id to get elements content, but allow the user to move up and down discourse moves in a conversation? */
         /* Getting icon click events for responses panel - maybe use another component other than carousel... show and hide cards */
@@ -335,6 +372,154 @@ var nsfchat = {
             nsfchat.RateFrownCom3();
         });
         
+        reflectTherapist1.addEventListener("click", function(event){
+           nsfchat.CategorizeReflectTherapist1(); 
+        });
+        
+        affirmTherapist1.addEventListener("click", function(event){
+           nsfchat.CategorizeAffirmTherapist1(); 
+        });
+        
+        refuteTherapist1.addEventListener("click", function(event){
+           nsfchat.CategorizeRefuteTherapist1(); 
+        });
+        
+        summaryTherapist1.addEventListener("click", function(event){
+           nsfchat.CategorizeSummaryTherapist1(); 
+        });
+        
+        openTherapist1.addEventListener("click", function(event){
+           nsfchat.CategorizeOpenTherapist1(); 
+        });
+        
+        closeTherapist1.addEventListener("click", function(event){
+           nsfchat.CategorizeCloseTherapist1(); 
+        });
+        
+        reflectTherapist2.addEventListener("click", function(event){
+           nsfchat.CategorizeReflectTherapist2(); 
+        });
+        
+        affirmTherapist2.addEventListener("click", function(event){
+           nsfchat.CategorizeAffirmTherapist2(); 
+        });
+        
+        refuteTherapist2.addEventListener("click", function(event){
+           nsfchat.CategorizeRefuteTherapist2(); 
+        });
+        
+        summaryTherapist2.addEventListener("click", function(event){
+           nsfchat.CategorizeSummaryTherapist2(); 
+        });
+        
+        openTherapist2.addEventListener("click", function(event){
+           nsfchat.CategorizeOpenTherapist2(); 
+        });
+        
+        closeTherapist2.addEventListener("click", function(event){
+           nsfchat.CategorizeCloseTherapist2(); 
+        });
+        
+        reflectTherapist3.addEventListener("click", function(event){
+           nsfchat.CategorizeReflectTherapist3(); 
+        });
+        
+        affirmTherapist3.addEventListener("click", function(event){
+           nsfchat.CategorizeAffirmTherapist3(); 
+        });
+        
+        refuteTherapist3.addEventListener("click", function(event){
+           nsfchat.CategorizeRefuteTherapist3(); 
+        });
+        
+        summaryTherapist3.addEventListener("click", function(event){
+           nsfchat.CategorizeSummaryTherapist3(); 
+        });
+        
+        openTherapist3.addEventListener("click", function(event){
+           nsfchat.CategorizeOpenTherapist3(); 
+        });
+        
+        closeTherapist3.addEventListener("click", function(event){
+           nsfchat.CategorizeCloseTherapist3(); 
+        });
+        
+        reflectCom1.addEventListener("click", function(event){
+           nsfchat.CategorizeReflectCom1(); 
+        });
+        
+        affirmCom1.addEventListener("click", function(event){
+           nsfchat.CategorizeAffirmCom1(); 
+        });
+        
+        refuteCom1.addEventListener("click", function(event){
+           nsfchat.CategorizeRefuteCom1(); 
+        });
+        
+        summaryCom1.addEventListener("click", function(event){
+           nsfchat.CategorizeSummaryCom1(); 
+        });
+        
+        openCom1.addEventListener("click", function(event){
+           nsfchat.CategorizeOpenCom1(); 
+        });
+        
+        closeCom1.addEventListener("click", function(event){
+           nsfchat.CategorizeCloseCom1(); 
+        });
+        
+        reflectCom2.addEventListener("click", function(event){
+           nsfchat.CategorizeReflectCom2(); 
+        });
+        
+        affirmCom2.addEventListener("click", function(event){
+           nsfchat.CategorizeAffirmCom2(); 
+        });
+        
+        refuteCom2.addEventListener("click", function(event){
+           nsfchat.CategorizeRefuteCom2(); 
+        });
+        
+        summaryCom2.addEventListener("click", function(event){
+           nsfchat.CategorizeSummaryCom2(); 
+        });
+        
+        openCom2.addEventListener("click", function(event){
+           nsfchat.CategorizeOpenCom2(); 
+        });
+        
+        closeCom2.addEventListener("click", function(event){
+           nsfchat.CategorizeCloseCom2(); 
+        });
+        
+        reflectCom3.addEventListener("click", function(event){
+           nsfchat.CategorizeReflectCom3(); 
+        });
+        
+        affirmCom3.addEventListener("click", function(event){
+           nsfchat.CategorizeAffirmCom3(); 
+        });
+        
+        refuteCom3.addEventListener("click", function(event){
+           nsfchat.CategorizeRefuteCom3(); 
+        });
+        
+        summaryCom3.addEventListener("click", function(event){
+           nsfchat.CategorizeSummaryCom3(); 
+        });
+        
+        openCom3.addEventListener("click", function(event){
+           nsfchat.CategorizeOpenCom3(); 
+        });
+        
+        closeCom3.addEventListener("click", function(event){
+           nsfchat.CategorizeCloseCom3(); 
+        });
+        
+        clickCloseDM.addEventListener("click", function(event){
+           nsfchat.CloseDirectMessageWindow(); 
+        });
+        
     },
 
     /* Get Client Reponse */
@@ -402,7 +587,10 @@ var nsfchat = {
     
     /* Submit New Message */
     submitNewMessage:function(object){
+        /* Add message from textbox to threaded discussion */
         
+        /* Save threaded discussion to database */
+       
     },
     
     /* Filter Online Client */
@@ -512,27 +700,52 @@ var nsfchat = {
     
     /* Load Direct Message 1 */
     LoadDirectMessage1:function(object){
+        /* Show user name in direct message window */
         
+        /* Load threaded discussion with therapist in direct messaging window */
+        
+        /* Show direct message window */
+        showEl(directmessagewindow);
     },
     
     /* Load Direct Message 2 */
     LoadDirectMessage2:function(object){
+        /* Show user name in direct message window */
         
+        /* Load threaded discussion with therapist in direct messaging window */
+        
+        /* Show direct message window */
+        showEl(directmessagewindow);
     },
     
     /* Load Direct Message 3 */
     LoadDirectMessage3:function(object){
+        /* Show user name in direct message window */
         
+        /* Load threaded discussion with therapist in direct messaging window */
+        
+        /* Show direct message window */
+        showEl(directmessagewindow);
     },
     
     /* Load Direct Message 4 */
     LoadDirectMessage4:function(object){
+        /* Show user name in direct message window */
         
+        /* Load threaded discussion with therapist in direct messaging window */
+        
+        /* Show direct message window */
+        showEl(directmessagewindow);
     },
     
     /* Load Direct Message 5 */
     LoadDirectMessage5:function(object){
+        /* Show user name in direct message window */
         
+        /* Load threaded discussion with therapist in direct messaging window */
+        
+        /* Show direct message window */
+        showEl(directmessagewindow);
     },
     
     /* Login */
@@ -653,6 +866,154 @@ var nsfchat = {
     
     RateFrownCom3:function(object){
         
+    },
+    
+    CategorizeReflectTherapist1:function(object){
+        
+    },
+    
+    CategorizeAffirmTherapist1:function(object){
+        
+    },
+    
+    CategorizeRefuteTherapist1:function(object){
+        
+    },
+    
+    CategorizeSummaryTherapist1:function(object){
+        
+    },
+    
+    CategorizeOpenTherapist1:function(object){
+        
+    },
+    
+    CategorizeCloseTherapist1:function(object){
+        
+    },
+    
+    CategorizeReflectTherapist2:function(object){
+        
+    },
+    
+    CategorizeAffirmTherapist2:function(object){
+        
+    },
+    
+    CategorizeRefuteTherapist2:function(object){
+        
+    },
+    
+    CategorizeSummaryTherapist2:function(object){
+        
+    },
+    
+    CategorizeOpenTherapist2:function(object){
+        
+    },
+    
+    CategorizeCloseTherapist2:function(object){
+        
+    },
+    
+    CategorizeReflectTherapist3:function(object){
+        
+    },
+    
+    CategorizeAffirmTherapist3:function(object){
+        
+    },
+    
+    CategorizeRefuteTherapist3:function(object){
+        
+    },
+    
+    CategorizeSummaryTherapist3:function(object){
+        
+    },
+    
+    CategorizeOpenTherapist3:function(object){
+        
+    },
+    
+    CategorizeCloseTherapist3:function(object){
+        
+    },
+    
+    CategorizeReflectCom1:function(object){
+        
+    },
+    
+    CategorizeAffirmCom1:function(object){
+        
+    },
+    
+    CategorizeRefuteCom1:function(object){
+        
+    },
+    
+    CategorizeSummaryCom1:function(object){
+        
+    },
+    
+    CategorizeOpenCom1:function(object){
+        
+    },
+    
+    CategorizeCloseCom1:function(object){
+        
+    },
+    
+    CategorizeReflectCom2:function(object){
+        
+    },
+    
+    CategorizeAffirmCom2:function(object){
+        
+    },
+    
+    CategorizeRefuteCom2:function(object){
+        
+    },
+    
+    CategorizeSummaryCom2:function(object){
+        
+    },
+    
+    CategorizeOpenCom2:function(object){
+        
+    },
+    
+    CategorizeCloseCom2:function(object){
+        
+    },
+    
+    CategorizeReflectCom3:function(object){
+        
+    },
+    
+    CategorizeAffirmCom3:function(object){
+        
+    },
+    
+    CategorizeRefuteCom3:function(object){
+        
+    },
+    
+    CategorizeSummaryCom3:function(object){
+        
+    },
+    
+    CategorizeOpenCom3:function(object){
+        
+    },
+    
+    CategorizeCloseCom3:function(object){
+        
+    },
+    
+    CloseDirectMessageWindow:function(object){
+        hideEl(directmessagewindow);
     }
     
 /* End of nsfchat.js */
