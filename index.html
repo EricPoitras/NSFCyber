@@ -25,11 +25,14 @@
       $(document).ready(function(){ init();});
 
       function init(){
-          $('.popovercus').popover({
+        $('.popovercus').popover({
               container: 'body'
-          })
+        })
+          
+        /* Hide the direct messaging window */
+        hideEl(directmessagewindow);
 
-      nsfchat.addPageEventListeners();
+        nsfchat.addPageEventListeners();
 
       }
 
@@ -315,12 +318,12 @@
                                             <i role="button" id="dropdownMenuLinkComment" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 fa fa-check-square-o dropdown-toggle" aria-hidden="true">
 
                                               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLinkComment">
-                                                <a class="dropdown-item" href="#">Reflection</a>
-                                                <a class="dropdown-item" href="#">Affirmation</a>
-                                                <a class="dropdown-item" href="#">Refutation</a>
-                                                <a class="dropdown-item" href="#">Summary</a>
-                                                <a class="dropdown-item" href="#">Open Question</a>
-                                                <a class="dropdown-item" href="#">Close Question</a>
+                                                <a id="ReflectTherapist1" class="dropdown-item" href="#">Reflection</a>
+                                                <a id="AffirmTherapist1" class="dropdown-item" href="#">Affirmation</a>
+                                                <a id="RefuteTherapist1" class="dropdown-item" href="#">Refutation</a>
+                                                <a id="SummaryTherapist1" class="dropdown-item" href="#">Summary</a>
+                                                <a id="OpenTherapist1" class="dropdown-item" href="#">Open Question</a>
+                                                <a id="CloseTherapist1" class="dropdown-item" href="#">Close Question</a>
                                               </div>
 
                                             </i>
@@ -373,12 +376,12 @@
                                             <i role="button" id="dropdownMenuLinkComment" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 fa fa-check-square-o dropdown-toggle" aria-hidden="true">
 
                                               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLinkComment">
-                                                <a class="dropdown-item" href="#">Reflection</a>
-                                                <a class="dropdown-item" href="#">Affirmation</a>
-                                                <a class="dropdown-item" href="#">Refutation</a>
-                                                <a class="dropdown-item" href="#">Summary</a>
-                                                <a class="dropdown-item" href="#">Open Question</a>
-                                                <a class="dropdown-item" href="#">Close Question</a>
+                                                <a id="ReflectTherapist2" class="dropdown-item" href="#">Reflection</a>
+                                                <a id="AffirmTherapist2" class="dropdown-item" href="#">Affirmation</a>
+                                                <a id="RefuteTherapist2" class="dropdown-item" href="#">Refutation</a>
+                                                <a id="SummaryTherapist2" class="dropdown-item" href="#">Summary</a>
+                                                <a id="OpenTherapist2" class="dropdown-item" href="#">Open Question</a>
+                                                <a id="CloseTherapist2" class="dropdown-item" href="#">Close Question</a>
                                               </div>
 
                                             </i>
@@ -431,12 +434,12 @@
                                             <i role="button" id="dropdownMenuLinkComment" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 fa fa-check-square-o dropdown-toggle" aria-hidden="true">
 
                                               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLinkComment">
-                                                <a class="dropdown-item" href="#">Reflection</a>
-                                                <a class="dropdown-item" href="#">Affirmation</a>
-                                                <a class="dropdown-item" href="#">Refutation</a>
-                                                <a class="dropdown-item" href="#">Summary</a>
-                                                <a class="dropdown-item" href="#">Open Question</a>
-                                                <a class="dropdown-item" href="#">Close Question</a>
+                                                <a id="ReflectTherapist3" class="dropdown-item" href="#">Reflection</a>
+                                                <a id="AffirmTherapist3" class="dropdown-item" href="#">Affirmation</a>
+                                                <a id="RefuteTherapist3" class="dropdown-item" href="#">Refutation</a>
+                                                <a id="SummaryTherapist3" class="dropdown-item" href="#">Summary</a>
+                                                <a id="OpenTherapist3" class="dropdown-item" href="#">Open Question</a>
+                                                <a id="CloseTherapist3" class="dropdown-item" href="#">Close Question</a>
                                               </div>
 
                                             </i>
@@ -719,12 +722,12 @@
                                 <i role="button" id="dropdownMenuLinkComment" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 fa fa-check-square-o dropdown-toggle" aria-hidden="true">
 
                                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLinkComment">
-                                    <a class="dropdown-item" href="#">Reflection</a>
-                                    <a class="dropdown-item" href="#">Affirmation</a>
-                                    <a class="dropdown-item" href="#">Refutation</a>
-                                    <a class="dropdown-item" href="#">Summary</a>
-                                    <a class="dropdown-item" href="#">Open Question</a>
-                                    <a class="dropdown-item" href="#">Close Question</a>
+                                    <a id="ReflectCom1" class="dropdown-item" href="#">Reflection</a>
+                                    <a id="AffirmCom1" class="dropdown-item" href="#">Affirmation</a>
+                                    <a id="RefuteCom1" class="dropdown-item" href="#">Refutation</a>
+                                    <a id="SummaryCom1" class="dropdown-item" href="#">Summary</a>
+                                    <a id="OpenCom1" class="dropdown-item" href="#">Open Question</a>
+                                    <a id="CloseCom1" class="dropdown-item" href="#">Close Question</a>
                                   </div>
 
                                 </i>
@@ -750,12 +753,12 @@
                                 <i role="button" id="dropdownMenuLinkComment" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 fa fa-check-square-o dropdown-toggle" aria-hidden="true">
 
                                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLinkComment">
-                                    <a class="dropdown-item" href="#">Reflection</a>
-                                    <a class="dropdown-item" href="#">Affirmation</a>
-                                    <a class="dropdown-item" href="#">Refutation</a>
-                                    <a class="dropdown-item" href="#">Summary</a>
-                                    <a class="dropdown-item" href="#">Open Question</a>
-                                    <a class="dropdown-item" href="#">Close Question</a>
+                                    <a id="ReflectCom2" class="dropdown-item" href="#">Reflection</a>
+                                    <a id="AffirmCom2" class="dropdown-item" href="#">Affirmation</a>
+                                    <a id="RefuteCom2" class="dropdown-item" href="#">Refutation</a>
+                                    <a id="SummaryCom2" class="dropdown-item" href="#">Summary</a>
+                                    <a id="OpenCom2" class="dropdown-item" href="#">Open Question</a>
+                                    <a id="CloseCom2" class="dropdown-item" href="#">Close Question</a>
                                   </div>
 
                                 </i>
@@ -781,12 +784,12 @@
                                 <i role="button" id="dropdownMenuLinkComment" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 fa fa-check-square-o dropdown-toggle" aria-hidden="true">
 
                                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLinkComment">
-                                    <a class="dropdown-item" href="#">Reflection</a>
-                                    <a class="dropdown-item" href="#">Affirmation</a>
-                                    <a class="dropdown-item" href="#">Refutation</a>
-                                    <a class="dropdown-item" href="#">Summary</a>
-                                    <a class="dropdown-item" href="#">Open Question</a>
-                                    <a class="dropdown-item" href="#">Close Question</a>
+                                    <a id="ReflectCom3" class="dropdown-item" href="#">Reflection</a>
+                                    <a id="AffirmCom3" class="dropdown-item" href="#">Affirmation</a>
+                                    <a id="RefuteCom3" class="dropdown-item" href="#">Refutation</a>
+                                    <a id="SummaryCom3" class="dropdown-item" href="#">Summary</a>
+                                    <a id="OpenCom3" class="dropdown-item" href="#">Open Question</a>
+                                    <a id="CloseCom3" class="dropdown-item" href="#">Close Question</a>
                                   </div>
 
                                 </i>
@@ -901,9 +904,14 @@
     </div>
     
     <!-- Chat Window (Appears on Top of Elements) -->
-    <div class="card chatwindowarea">
+    <div id="directmessagewindow" class="card chatwindowarea">
         <div class="card-body">
-            <h4 class="card-title">Message <span>John Doe 7</span></h4>
+            <div class="d-flex flex-row">
+                <div><h4 class="card-title">Message <span>John Doe 7</span></h4></div>
+                <div class="ml-auto">
+                    <a id="clickCloseDM" href="#"><i class="fa fa-times-circle-o fa-2x" aria-hidden="true"></i></a> 
+                </div>
+            </div>
         </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">
