@@ -234,6 +234,11 @@ h4#username{
     height: 300px;
 }
 
+/* Direct Message Window */
+#clickCloseDM i.fa{
+    color: gray;
+}
+
 /* Graphs */
 
 #chart1_div, #chart2_div, #chart3_div{
