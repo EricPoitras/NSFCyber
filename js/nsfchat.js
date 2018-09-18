@@ -6,6 +6,8 @@ var nsfchat = {
 
     /* List event listeners */
     addPageEventListeners: function(){
+        
+        /* List of Controls to Handle User Interactions */
         var buttondiv = getDiv("submitNewText");
         var buttondiv2 = getDiv("submitNewChat");
         var buttondiv3 = getDiv("submitSearch");
@@ -101,6 +103,25 @@ var nsfchat = {
         var openCom3 = getDiv("OpenCom3");
         var closeCom3 = getDiv("CloseCom3");
         var clickCloseDM = getDiv("clickCloseDM");
+        var clickMIWiz1 = getDiv("clickMIWiz1");
+        var clickMIWiz2 = getDiv("clickMIWiz2");
+        var clickMIWiz3 = getDiv("clickMIWiz3");
+        
+        /* List of HTML Elements to toggle visibility and load data */
+        var panelCommunity = getDiv("panelCommunity");
+        var panelConversation = getDiv("panelConversation");
+        var panelDemographic = getDiv("panelDemographic");
+        var panelAnalytics = getDiv("panelAnalytics");
+        var panelCommunityResponse = getDiv("panelCommunityResponse");
+        var panelCommunityConsultation = getDiv("panelCommunityConsultation");
+        var panelResponseArea = getDiv("panelResponseArea");
+        
+        var cardtherapist1content = getDiv("cardtherapist1content");
+        var cardtherapist1rating = getDiv("cardtherapist1rating");
+        var cardtherapist2content = getDiv("cardtherapist2content");
+        var cardtherapist2rating = getDiv("cardtherapist2rating");
+        var cardtherapist3content = getDiv("cardtherapist3content");
+        var cardtherapist3rating = getDiv("cardtherapist3rating");
         
         /* Getting icon click events for conversation panel - should we simply list a certain number to use id to get elements content, but allow the user to move up and down discourse moves in a conversation? */
         /* Getting icon click events for responses panel - maybe use another component other than carousel... show and hide cards */
@@ -312,27 +333,27 @@ var nsfchat = {
         
         /* Listen for Feedback Requests */
         clickIndFeedback1.addEventListener("click", function(event){
-            nsfchat.ClickIndFeedback1();
+            nsfchat.clickIndFeedback1();
         });
         
         clickIndFeedback2.addEventListener("click", function(event){
-            nsfchat.ClickIndFeedback2();
+            nsfchat.clickIndFeedback2();
         });
         
         clickIndFeedback3.addEventListener("click", function(event){
-            nsfchat.ClickIndFeedback3();
+            nsfchat.clickIndFeedback3();
         });
         
         clickComFeedback1.addEventListener("click", function(event){
-            nsfchat.ClickComFeedback1();
+            nsfchat.clickComFeedback1();
         });
         
         clickComFeedback2.addEventListener("click", function(event){
-            nsfchat.ClickComFeedback2();
+            nsfchat.clickComFeedback2();
         });
         
         clickComFeedback3.addEventListener("click", function(event){
-            nsfchat.ClickComFeedback3();
+            nsfchat.clickComFeedback3();
         });
         
         /* Listen for Ratings of Community Responses */
@@ -520,6 +541,135 @@ var nsfchat = {
            nsfchat.CloseDirectMessageWindow(); 
         });
         
+        clickMIWiz1.addEventListener("click", function(event){
+           nsfchat.LoadAnalyticsResponse1(); 
+        });
+        
+        clickMIWiz2.addEventListener("click", function(event){
+           nsfchat.LoadAnalyticsResponse2(); 
+        });
+        
+        clickMIWiz3.addEventListener("click", function(event){
+           nsfchat.LoadAnalyticsResponse3(); 
+        });
+        
+    },
+    
+    /* View Router */
+    viewRouter:function(view){
+        switch(view){
+            case 'clientlanding':
+                console.log("Route to therapist landing view...");
+                /* Display only the conversation */
+            case 'therapistlanding':
+                console.log("Route to therapist landing view...");
+                /* Display only the client list for a particular user */
+                /* Hide the direct messaging window */
+                hideEl(directmessagewindow);
+                /* Hide the community panel */
+                hideEl(panelCommunity);
+                /* Hide the conversation panel */
+                hideEl(panelConversation);
+                /* Hide the demographic panel */
+                hideEl(panelDemographic);
+                /* Hide the analytics panel */
+                hideEl(panelAnalytics);
+                /* Hide the community response panel */
+                hideEl(panelCommunityResponse);
+                /* Hide the community consultation panel */
+                hideEl(panelCommunityConsultation);
+                break;
+            case 'clientdiscussionview':
+                console.log("Route to client discussion view...");
+                /* Display for users as clients their discussions with therapists */
+                break;
+            case 'therapistdiscussionview':
+                console.log("Route to therapist discussion view...");
+                /* Display for therapists their discussions with clients */
+                /* Hide the direct messaging window */
+                hideEl(directmessagewindow);
+                /* Show the community panel */
+                showEl(panelCommunity);
+                /* Show the conversation panel */
+                showEl(panelConversation);
+                /* Show the demographic panel */
+                showEl(panelDemographic);
+                /* Hide the analytics panel */
+                hideEl(panelAnalytics);
+                /* Hide the community response panel */
+                hideEl(panelCommunityResponse);
+                /* Hide the community consultation panel */
+                hideEl(panelCommunityConsultation);
+                /* Hide the response panel area */
+                hideEl(panelResponseArea);
+                break;
+            case 'clientresponseview':
+                console.log("Route to client response view...");
+                /* Display for clients to respond to latest therapist response */
+                break;
+            case 'therapistresponseview':
+                console.log("Route to therapist response view...");
+                /* Display for therapist to respond to latest patient response */
+                /* Hide the direct messaging window */
+                hideEl(directmessagewindow);
+                /* Show the community panel */
+                showEl(panelCommunity);
+                /* Show the conversation panel */
+                showEl(panelConversation);
+                /* Show the demographic panel */
+                showEl(panelDemographic);
+                /* Hide the analytics panel */
+                hideEl(panelAnalytics);
+                /* Hide the community response panel */
+                hideEl(panelCommunityResponse);
+                /* Hide the community consultation panel */
+                hideEl(panelCommunityConsultation);
+                /* Hide the response panel area */
+                showEl(panelResponseArea);
+                break;
+            case 'therapistcommunityresponseview':
+                console.log("Route to therapist community response view...");
+                /* Display for therapists to rate responses submitted by members of the community */
+                /* Hide the direct messaging window */
+                hideEl(directmessagewindow);
+                /* Show the community panel */
+                showEl(panelCommunity);
+                /* Show the conversation panel */
+                showEl(panelConversation);
+                /* Show the demographic panel */
+                showEl(panelDemographic);
+                /* Hide the analytics panel */
+                hideEl(panelAnalytics);
+                /* Hide the community response panel */
+                showEl(panelCommunityResponse);
+                /* Hide the community consultation panel */
+                hideEl(panelCommunityConsultation);
+                /* Hide the response panel area */
+                hideEl(panelResponseArea);
+                break;
+                
+            /* This is not used yet... based on the data when all the feedback has been provided to avoid contamination */
+            case 'therapistcommunityconsultationview':
+                console.log("Route to therapist community response view...");
+                /* Display for therapists to rate responses submitted by members of the community */
+                /* Hide the direct messaging window */
+                hideEl(directmessagewindow);
+                /* Show the community panel */
+                showEl(panelCommunity);
+                /* Show the conversation panel */
+                showEl(panelConversation);
+                /* Show the demographic panel */
+                showEl(panelDemographic);
+                /* Hide the analytics panel */
+                hideEl(panelAnalytics);
+                /* Hide the community response panel */
+                showEl(panelCommunityResponse);
+                /* Hide the community consultation panel */
+                showEl(panelCommunityConsultation);
+                /* Hide the response panel area */
+                hideEl(panelResponseArea);
+                break;
+        }
     },
 
     /* Get Client Reponse */
@@ -533,6 +683,15 @@ var nsfchat = {
         convo.appendChild(newtt);
 
         getDiv("newTextToSubmit").value = "";
+        
+        /* POST new text to server */
+        
+        /* GET communmity responses */
+        
+        /* Refresh the HTML content with commumnity responses */
+        
+        /* Route to the community responses view or consultation view based on whether or not all responses are rated by the user */
+        nsfchat.viewRouter("therapistcommunityresponseview");
     },
     
     /* Set Client Response */
@@ -650,52 +809,112 @@ var nsfchat = {
     
     /* Load Client 1 Notification */
     LoadNotificationClient1:function(object){
+        /* Get Data About Client 1 */
         
+        /* Refresh HTML values */
+        
+        /* Route to therapist discussion view or response view based on state of the conversation - everything rated and categorized, and client responded */
+        nsfchat.viewRouter("therapistdiscussionview");
+        nsfchat.viewRouter("therapistresponseview");
     },
     
     /* Load Client 2 Notification */
     LoadNotificationClient2:function(object){
+        /* Get Data About Client 1 */
         
+        /* Refresh HTML values */
+        
+        /* Route to therapist discussion view or response view based on state of the conversation - everything rated and categorized, and client responded */
+        nsfchat.viewRouter("therapistdiscussionview");
+        nsfchat.viewRouter("therapistresponseview");
     },
     
     /* Load Client 3 Notification */
     LoadNotificationClient3:function(object){
+        /* Get Data About Client 1 */
         
+        /* Refresh HTML values */
+        
+        /* Route to therapist discussion view or response view based on state of the conversation - everything rated and categorized, and client responded */
+        nsfchat.viewRouter("therapistdiscussionview");
+        nsfchat.viewRouter("therapistresponseview");
     },
     
     /* Load Client 4 Notification */
     LoadNotificationClient4:function(object){
+        /* Get Data About Client 1 */
         
+        /* Refresh HTML values */
+        
+        /* Route to therapist discussion view or response view based on state of the conversation - everything rated and categorized, and client responded */
+        nsfchat.viewRouter("therapistdiscussionview");
+        nsfchat.viewRouter("therapistresponseview");
     },
     
     /* Load Client 5 Notification */
     LoadNotificationClient5:function(object){
+        /* Get Data About Client 1 */
         
+        /* Refresh HTML values */
+        
+        /* Route to therapist discussion view or response view based on state of the conversation - everything rated and categorized, and client responded */
+        nsfchat.viewRouter("therapistdiscussionview");
+        nsfchat.viewRouter("therapistresponseview");
     },
     
     /* Load Client 1 Conversation */
     LoadConversationClient1:function(object){
+        /* Get Data About Client 1 */
         
+        /* Refresh HTML values */
+        
+        /* Route to therapist discussion view or response view based on state of the conversation - everything rated and categorized, and client responded */
+        nsfchat.viewRouter("therapistdiscussionview");
+        nsfchat.viewRouter("therapistresponseview");
     },
     
     /* Load Client 2 Conversation */
     LoadConversationClient2:function(object){
+        /* Get Data About Client 1 */
         
+        /* Refresh HTML values */
+        
+        /* Route to therapist discussion view or response view based on state of the conversation - everything rated and categorized, and client responded */
+        nsfchat.viewRouter("therapistdiscussionview");
+        nsfchat.viewRouter("therapistresponseview");
     },
     
     /* Load Client 3 Conversation */
     LoadConversationClient3:function(object){
+        /* Get Data About Client 1 */
         
+        /* Refresh HTML values */
+        
+        /* Route to therapist discussion view or response view based on state of the conversation - everything rated and categorized, and client responded */
+        nsfchat.viewRouter("therapistdiscussionview");
+        nsfchat.viewRouter("therapistresponseview");
     },
     
     /* Load Client 4 Conversation */
     LoadConversationClient4:function(object){
+        /* Get Data About Client 1 */
         
+        /* Refresh HTML values */
+        
+        /* Route to therapist discussion view or response view based on state of the conversation - everything rated and categorized, and client responded */
+        nsfchat.viewRouter("therapistdiscussionview");
+        nsfchat.viewRouter("therapistresponseview");
     },
     
     /* Load Client 5 Conversation */
     LoadConversationClient5:function(object){
+        /* Get Data About Client 1 */
         
+        /* Refresh HTML values */
+        
+        /* Route to therapist discussion view or response view based on state of the conversation - everything rated and categorized, and client responded */
+        nsfchat.viewRouter("therapistdiscussionview");
+        nsfchat.viewRouter("therapistresponseview");
     },
     
     /* Load Direct Message 1 */
@@ -807,27 +1026,42 @@ var nsfchat = {
     /* Deliver Individual and Community Feedback (NLP and CrowdSource) */
     
     clickIndFeedback1:function(object){
-        
+        nsfchat.LoadAnalyticsResponse1(); 
     },
     
     clickIndFeedback2:function(object){
-        
+        nsfchat.LoadAnalyticsResponse2();
     },
     
     clickIndFeedback3:function(object){
-        
+        nsfchat.LoadAnalyticsResponse3();
     },
     
     clickComFeedback1:function(object){
+        /* GET communmity responses */
         
+        /* Refresh the HTML content with commumnity responses */
+        
+        /* Route to the community responses view or consultation view based on whether or not all responses are rated by the user */
+        showEl("panelCommunityResponse");
     },
     
     clickComFeedback2:function(object){
+        /* GET communmity responses */
         
+        /* Refresh the HTML content with commumnity responses */
+        
+        /* Route to the community responses view or consultation view based on whether or not all responses are rated by the user */
+        showEl("panelCommunityResponse");
     },
     
     clickComFeedback3:function(object){
+        /* GET communmity responses */
         
+        /* Refresh the HTML content with commumnity responses */
+        
+        /* Route to the community responses view or consultation view based on whether or not all responses are rated by the user */
+        showEl("panelCommunityResponse");
     },
     
     /* Save Ratings for Community Responses */
@@ -1014,7 +1248,35 @@ var nsfchat = {
     
     CloseDirectMessageWindow:function(object){
         hideEl(directmessagewindow);
+    },
+    
+    LoadAnalyticsResponse1:function(object){
+        /* GET Analytics related to response 1 */
+        
+        /* Refresh analytics panel HTML */
+        
+        /* Show analytics panel */
+        showEl(panelAnalytics);
+    },
+    
+    LoadAnalyticsResponse2:function(object){
+        /* GET Analytics related to response 2 */
+        
+        /* Refresh analytics panel HTML */
+        
+        /* Show analytics panel */
+        showEl(panelAnalytics);
+    },
+    
+    LoadAnalyticsResponse3:function(object){
+        /* GET Analytics related to response 3 */
+        
+        /* Refresh analytics panel HTML */
+        
+        /* Show analytics panel */
+        showEl(panelAnalytics);
     }
+    
     
 /* End of nsfchat.js */
 };
