@@ -123,6 +123,19 @@ var nsfchat = {
         var cardtherapist3content = getDiv("cardtherapist3content");
         var cardtherapist3rating = getDiv("cardtherapist3rating");
         
+        var dropdownMenuLinkComment1 = getDiv("dropdownMenuLinkComment1");
+        var dropdownMenuLinkComment2 = getDiv("dropdownMenuLinkComment2");
+        var dropdownMenuLinkComment3 = getDiv("dropdownMenuLinkComment3");
+        var dropdownMenuLinkComment4 = getDiv("dropdownMenuLinkComment4");
+        var dropdownMenuLinkComment5 = getDiv("dropdownMenuLinkComment5");
+        var dropdownMenuLinkComment6 = getDiv("dropdownMenuLinkComment6");
+        
+        var iconNotice1 = getDiv("iconNotice1");
+        var iconNotice2 = getDiv("iconNotice2");
+        var iconNotice3 = getDiv("iconNotice3");
+        var iconNotice4 = getDiv("iconNotice4");
+        var iconNotice5 = getDiv("iconNotice5");
+        
         /* Getting icon click events for conversation panel - should we simply list a certain number to use id to get elements content, but allow the user to move up and down discourse moves in a conversation? */
         /* Getting icon click events for responses panel - maybe use another component other than carousel... show and hide cards */
 
@@ -670,6 +683,7 @@ var nsfchat = {
                 hideEl(panelResponseArea);
                 break;
         }
+        
     },
 
     /* Get Client Reponse */
@@ -692,6 +706,7 @@ var nsfchat = {
         
         /* Route to the community responses view or consultation view based on whether or not all responses are rated by the user */
         nsfchat.viewRouter("therapistcommunityresponseview");
+        nsfchat.viewRouter("therapistcommunityconsultationview");
     },
     
     /* Set Client Response */
@@ -809,6 +824,8 @@ var nsfchat = {
     
     /* Load Client 1 Notification */
     LoadNotificationClient1:function(object){
+        /* Clear notification icon */
+        clearDiv(iconNotice1);
         /* Get Data About Client 1 */
         
         /* Refresh HTML values */
@@ -820,6 +837,9 @@ var nsfchat = {
     
     /* Load Client 2 Notification */
     LoadNotificationClient2:function(object){
+        /* Clear notification icon */
+        clearDiv(iconNotice2);
+        
         /* Get Data About Client 1 */
         
         /* Refresh HTML values */
@@ -827,10 +847,14 @@ var nsfchat = {
         /* Route to therapist discussion view or response view based on state of the conversation - everything rated and categorized, and client responded */
         nsfchat.viewRouter("therapistdiscussionview");
         nsfchat.viewRouter("therapistresponseview");
+        hideEl(iconnotice2);
     },
     
     /* Load Client 3 Notification */
     LoadNotificationClient3:function(object){
+        /* Clear notification icon */
+        clearDiv(iconNotice3);
+        
         /* Get Data About Client 1 */
         
         /* Refresh HTML values */
@@ -838,10 +862,14 @@ var nsfchat = {
         /* Route to therapist discussion view or response view based on state of the conversation - everything rated and categorized, and client responded */
         nsfchat.viewRouter("therapistdiscussionview");
         nsfchat.viewRouter("therapistresponseview");
+        hideEl(iconnotice3);
     },
     
     /* Load Client 4 Notification */
     LoadNotificationClient4:function(object){
+        /* Clear notification icon */
+        clearDiv(iconNotice4);
+        
         /* Get Data About Client 1 */
         
         /* Refresh HTML values */
@@ -849,10 +877,14 @@ var nsfchat = {
         /* Route to therapist discussion view or response view based on state of the conversation - everything rated and categorized, and client responded */
         nsfchat.viewRouter("therapistdiscussionview");
         nsfchat.viewRouter("therapistresponseview");
+        hideEl(iconnotice4);
     },
     
     /* Load Client 5 Notification */
     LoadNotificationClient5:function(object){
+        /* Clear notification icon */
+        clearDiv(iconNotice5);
+        
         /* Get Data About Client 1 */
         
         /* Refresh HTML values */
@@ -860,6 +892,7 @@ var nsfchat = {
         /* Route to therapist discussion view or response view based on state of the conversation - everything rated and categorized, and client responded */
         nsfchat.viewRouter("therapistdiscussionview");
         nsfchat.viewRouter("therapistresponseview");
+        hideEl(iconnotice5);
     },
     
     /* Load Client 1 Conversation */
@@ -988,39 +1021,48 @@ var nsfchat = {
     /* Save Rating for Therapist Response */
     
     RateSmileTherapist1:function(object){
-        
+        hideEl(rateMehTherapist1);
+        hideEl(rateFrownTherapist1);
     },
     
     RateSmileTherapist2:function(object){
-        
+        hideEl(rateMehTherapist2);
+        hideEl(rateFrownTherapist2);
     },
     
     RateSmileTherapist3:function(object){
-        
+        hideEl(rateMehTherapist3);
+        hideEl(rateFrownTherapist3);
     },
     
     RateMehTherapist1:function(object){
-        
+        hideEl(rateSmileTherapist1);
+        hideEl(rateFrownTherapist1);
     },
     
     RateMehTherapist2:function(object){
-        
+        hideEl(rateSmileTherapist2);
+        hideEl(rateFrownTherapist2);
     },
     
     RateMehTherapist3:function(object){
-        
+        hideEl(rateSmileTherapist3);
+        hideEl(rateFrownTherapist3);
     },
     
     RateFrownTherapist1:function(object){
-        
+        hideEl(rateSmileTherapist1);
+        hideEl(rateMehTherapist1);
     },
     
     RateFrownTherapist2:function(object){
-        
+        hideEl(rateSmileTherapist2);
+        hideEl(rateMehTherapist2);
     },
     
     RateFrownTherapist3:function(object){
-        
+        hideEl(rateSmileTherapist3);
+        hideEl(rateMehTherapist3);
     },
     
     /* Deliver Individual and Community Feedback (NLP and CrowdSource) */
@@ -1067,183 +1109,228 @@ var nsfchat = {
     /* Save Ratings for Community Responses */
     
     RateSmileCom1:function(object){
-        
+        hideEl(rateMehCom1);
+        hideEl(rateFrownCom1);
     },
     
     RateSmileCom2:function(object){
-        
+        hideEl(rateMehCom2);
+        hideEl(rateFrownCom2);
     },
     
     RateSmileCom3:function(object){
-        
+        hideEl(rateMehCom3);
+        hideEl(rateFrownCom3);
     },
     
     RateMehCom1:function(object){
-        
+        hideEl(rateSmileCom1);
+        hideEl(rateFrownCom1);
     },
     
     RateMehCom2:function(object){
-        
+        hideEl(rateSmileCom2);
+        hideEl(rateFrownCom2);
     },
     
     RateMehCom3:function(object){
-        
+        hideEl(rateSmileCom3);
+        hideEl(rateFrownCom3);
     },
     
     RateFrownCom1:function(object){
-        
+        hideEl(rateSmileCom1);
+        hideEl(rateMehCom1);
     },
     
     RateFrownCom2:function(object){
-        
+        hideEl(rateSmileCom2);
+        hideEl(rateMehCom2);
     },
     
     RateFrownCom3:function(object){
-        
+        hideEl(rateSmileCom2);
+        hideEl(rateMehCom2);
     },
     
     CategorizeReflectTherapist1:function(object){
-        
+        clearDiv(dropdownMenuLinkComment1);
+        putp("Reflect",dropdownMenuLinkComment1,"float-left p-0 m-0");
     },
     
     CategorizeAffirmTherapist1:function(object){
-        
+        clearDiv(dropdownMenuLinkComment1);
+        putp("Affirmation",dropdownMenuLinkComment1,"float-left p-0 m-0");
     },
     
     CategorizeRefuteTherapist1:function(object){
-        
+        clearDiv(dropdownMenuLinkComment1);
+        putp("Refutation",dropdownMenuLinkComment1,"float-left p-0 m-0");
     },
     
     CategorizeSummaryTherapist1:function(object){
-        
+        clearDiv(dropdownMenuLinkComment1);
+        putp("Summary",dropdownMenuLinkComment1,"float-left p-0 m-0");
     },
     
     CategorizeOpenTherapist1:function(object){
-        
+        clearDiv(dropdownMenuLinkComment1);
+        putp("Open Question",dropdownMenuLinkComment1,"float-left p-0 m-0");
     },
     
     CategorizeCloseTherapist1:function(object){
-        
+        clearDiv(dropdownMenuLinkComment1);
+        putp("Close Question",dropdownMenuLinkComment1,"float-left p-0 m-0");
     },
     
     CategorizeReflectTherapist2:function(object){
-        
+        clearDiv(dropdownMenuLinkComment2);
+        putp("Reflect",dropdownMenuLinkComment2,"float-left p-0 m-0");
     },
     
     CategorizeAffirmTherapist2:function(object){
-        
+        clearDiv(dropdownMenuLinkComment2);
+        putp("Affirmation",dropdownMenuLinkComment2,"float-left p-0 m-0");
     },
     
     CategorizeRefuteTherapist2:function(object){
-        
+        clearDiv(dropdownMenuLinkComment2);
+        putp("Refutation",dropdownMenuLinkComment2,"float-left p-0 m-0");
     },
     
     CategorizeSummaryTherapist2:function(object){
-        
+        clearDiv(dropdownMenuLinkComment2);
+        putp("Summary",dropdownMenuLinkComment2,"float-left p-0 m-0");
     },
     
     CategorizeOpenTherapist2:function(object){
-        
+        clearDiv(dropdownMenuLinkComment2);
+        putp("Open Question",dropdownMenuLinkComment2,"float-left p-0 m-0");
     },
     
     CategorizeCloseTherapist2:function(object){
-        
+        clearDiv(dropdownMenuLinkComment2);
+        putp("Close Question",dropdownMenuLinkComment2,"float-left p-0 m-0");
     },
     
     CategorizeReflectTherapist3:function(object){
-        
+        clearDiv(dropdownMenuLinkComment3);
+        putp("Reflect",dropdownMenuLinkComment3,"float-left p-0 m-0");
     },
     
     CategorizeAffirmTherapist3:function(object){
-        
+        clearDiv(dropdownMenuLinkComment3);
+        putp("Affirmation",dropdownMenuLinkComment3,"float-left p-0 m-0");
     },
     
     CategorizeRefuteTherapist3:function(object){
-        
+        clearDiv(dropdownMenuLinkComment3);
+        putp("Refutation",dropdownMenuLinkComment3,"float-left p-0 m-0");
     },
     
     CategorizeSummaryTherapist3:function(object){
-        
+        clearDiv(dropdownMenuLinkComment3);
+        putp("Summary",dropdownMenuLinkComment3,"float-left p-0 m-0");
     },
     
     CategorizeOpenTherapist3:function(object){
-        
+        clearDiv(dropdownMenuLinkComment3);
+        putp("Open Question",dropdownMenuLinkComment3,"float-left p-0 m-0");
     },
     
     CategorizeCloseTherapist3:function(object){
-        
+        clearDiv(dropdownMenuLinkComment3);
+        putp("Close Question",dropdownMenuLinkComment3,"float-left p-0 m-0");
     },
     
     CategorizeReflectCom1:function(object){
-        
+        clearDiv(dropdownMenuLinkComment4);
+        putp("Reflect",dropdownMenuLinkComment4,"float-left p-0 m-0");
     },
     
     CategorizeAffirmCom1:function(object){
-        
+        clearDiv(dropdownMenuLinkComment4);
+        putp("Affirmation",dropdownMenuLinkComment4,"float-left p-0 m-0");
     },
     
     CategorizeRefuteCom1:function(object){
-        
+        clearDiv(dropdownMenuLinkComment4);
+        putp("Refutation",dropdownMenuLinkComment4,"float-left p-0 m-0");
     },
     
     CategorizeSummaryCom1:function(object){
-        
+        clearDiv(dropdownMenuLinkComment4);
+        putp("Summary",dropdownMenuLinkComment4,"float-left p-0 m-0");
     },
     
     CategorizeOpenCom1:function(object){
-        
+        clearDiv(dropdownMenuLinkComment4);
+        putp("Open Question",dropdownMenuLinkComment4,"float-left p-0 m-0");
     },
     
     CategorizeCloseCom1:function(object){
-        
+        clearDiv(dropdownMenuLinkComment4);
+        putp("Close Question",dropdownMenuLinkComment4,"float-left p-0 m-0");
     },
     
     CategorizeReflectCom2:function(object){
-        
+        clearDiv(dropdownMenuLinkComment5);
+        putp("Reflect",dropdownMenuLinkComment5,"float-left p-0 m-0");
     },
     
     CategorizeAffirmCom2:function(object){
-        
+        clearDiv(dropdownMenuLinkComment5);
+        putp("Affirmation",dropdownMenuLinkComment5,"float-left p-0 m-0");
     },
     
     CategorizeRefuteCom2:function(object){
-        
+        clearDiv(dropdownMenuLinkComment5);
+        putp("Refutation",dropdownMenuLinkComment5,"float-left p-0 m-0");
     },
     
     CategorizeSummaryCom2:function(object){
-        
+        clearDiv(dropdownMenuLinkComment5);
+        putp("Summary",dropdownMenuLinkComment5,"float-left p-0 m-0");
     },
     
     CategorizeOpenCom2:function(object){
-        
+        clearDiv(dropdownMenuLinkComment5);
+        putp("Open Question",dropdownMenuLinkComment5,"float-left p-0 m-0");
     },
     
     CategorizeCloseCom2:function(object){
-        
+        clearDiv(dropdownMenuLinkComment5);
+        putp("Close Question",dropdownMenuLinkComment5,"float-left p-0 m-0");
     },
     
     CategorizeReflectCom3:function(object){
-        
+        clearDiv(dropdownMenuLinkComment6);
+        putp("Reflect",dropdownMenuLinkComment6,"float-left p-0 m-0");
     },
     
     CategorizeAffirmCom3:function(object){
-        
+        clearDiv(dropdownMenuLinkComment6);
+        putp("Affirmation",dropdownMenuLinkComment6,"float-left p-0 m-0");
     },
     
     CategorizeRefuteCom3:function(object){
-        
+        clearDiv(dropdownMenuLinkComment6);
+        putp("Refutation",dropdownMenuLinkComment6,"float-left p-0 m-0");
     },
     
     CategorizeSummaryCom3:function(object){
-        
+        clearDiv(dropdownMenuLinkComment6);
+        putp("Summary",dropdownMenuLinkComment6,"float-left p-0 m-0");
     },
     
     CategorizeOpenCom3:function(object){
-        
+        clearDiv(dropdownMenuLinkComment6);
+        putp("Open Question",dropdownMenuLinkComment6,"float-left p-0 m-0");
     },
     
     CategorizeCloseCom3:function(object){
-        
+        clearDiv(dropdownMenuLinkComment6);
+        putp("Close Question",dropdownMenuLinkComment6,"float-left p-0 m-0");
     },
     
     CloseDirectMessageWindow:function(object){
