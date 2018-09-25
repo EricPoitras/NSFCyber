@@ -113,8 +113,23 @@ h4#username{
 
 .conversationarea .therapist i.fa-frown-o, .responsearea i.fa-frown-o, .communityresponsearea i.fa-frown-o{
     margin-left: 10px; 
+    /*margin-right: 10px;*/ 
+    color: red;
+}
+
+.conversationarea .therapist i.fa-thumbs-o-down, .responsearea i.fa-thumbs-o-down, .communityresponsearea i.fa-thumbs-o-down{
+    margin-left: 10px; 
     margin-right: 10px; 
     color: red;
+}
+
+.conversationarea .therapist i.fa-thumbs-o-up, .responsearea i.fa-thumbs-o-up, .communityresponsearea i.fa-thumbs-o-up{
+    margin-left: 10px; 
+    color: green;
+}
+
+.communityresponsearea i.fa-pencil-square-o{
+    color: #007bff;
 }
 
 .conversationfooter{
@@ -241,6 +256,6 @@ h4#username{
 
 /* Graphs */
 
-#chart1_div, #chart2_div, #chart3_div{
+#chart1_div, #chart2_div, #chart3_div, #chart4_div, #chart5_div, #chart6_div{
     z-index: 999;
 }
