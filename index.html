@@ -46,6 +46,11 @@
       google.charts.setOnLoadCallback(drawChart1);
       google.charts.setOnLoadCallback(drawChart2);
       google.charts.setOnLoadCallback(drawChart3);
+      google.charts.setOnLoadCallback(drawChart5);
+      google.charts.setOnLoadCallback(drawChart6);
+          
+      google.charts.load('current', {'packages':['timeline']});
+      google.charts.setOnLoadCallback(drawChart4);
 
       // Callback that creates and populates a data table,
       // instantiates the pie chart, passes in the data and
@@ -117,6 +122,74 @@
         // Instantiate and draw our chart, passing in some options.
         var chart = new google.visualization.PieChart(document.getElementById('chart3_div'));
         chart.draw(data3, options3);
+      }
+          
+      function drawChart4(){
+          var container = document.getElementById('chart4_div');
+          var chart = new google.visualization.Timeline(container);
+          var dataTable4 = new google.visualization.DataTable();
+          
+          dataTable4.addColumn({ type: 'string', id: 'Skill'});
+          dataTable4.addColumn({ type: 'string', id: 'Response'});
+          dataTable4.addColumn({ type: 'date', id: 'Start'});
+          dataTable4.addColumn({ type: 'date', id: 'End'});
+          
+          dataTable4.addRows([
+             ['Reflection','Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum.',new Date(2018,2,4,12,35,30,3450),new Date(2018,2,4,12,45,32,8000)],
+             ['Reflection','Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum.',new Date(2018,2,4,12,45,32,8000),new Date(2018,2,4,13,35,30,3450)],
+             ['Reflection','Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum.',new Date(2018,2,4,13,35,30,3450),new Date(2018,2,4,13,40,40,4570)]
+          ]);
+          
+          var options = {
+              'width':325
+          };
+          
+          chart.draw(dataTable4, options)
+      }
+          
+      function drawChart5(){
+          var data5 = new google.visualization.arrayToDataTable([
+             ['Response', 'Reflection', 'Affirmation', 'Refutation', 'Summary', 'Open Question', 'Close Question', {role: 'annotation'}],
+             ['Counselor',5,6,4,7,2,9,''],
+              ['Community',13,3,4,9,3,1,'']
+          ]);
+          
+          var options5 = {
+              width: 325,
+              legend:{position:'right',maxLines:6},
+              bar:{groupWidth: '75%'},
+              isStacked: true
+          };
+          
+          var chart = new google.visualization.BarChart(document.getElementById('chart5_div'));
+          chart.draw(data5, options5)
+      }
+          
+      function drawChart6(){
+          var data6 = new google.visualization.arrayToDataTable([
+             ['MI Skill','Frequency'],
+             ['Reflection', 10],
+              ['Affirmation', 3],
+              ['Refutation', 5],
+              ['Summary', 4],
+              ['Open', 8],
+              ['Close', 6]
+          ]);
+          
+          var options6 = {
+              width: 325,
+              title: 'MI Skill Usage in Session',
+              legend: 'none',
+              pieSliceText: 'label',
+              slices:{
+                0: {offset: 0.2},  
+              },
+              pieHole: 0.2,
+          };
+          
+          var chart = new google.visualization.PieChart(document.getElementById('chart6_div'));
+          
+          chart.draw(data6,options6);
       }
           
       </script>
@@ -330,6 +403,8 @@
                                             <i id="rateSmileTherapist1" class="p-0 fa fa-smile-o" aria-hidden="true"></i>
                                             <i id="rateMehTherapist1" class="p-0 fa fa-meh-o" aria-hidden="true"></i>
                                             <i id="rateFrownTherapist1" class="p-0 fa fa-frown-o" aria-hidden="true"></i>
+                                            <i class="p-0 fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                            <i class="p-0 fa fa-thumbs-o-down" aria-hidden="true"></i>
                                         </div>
                                          <ul class="list-group list-group-flush">
                                              <li class="list-group-item">
@@ -388,6 +463,8 @@
                                             <i id="rateSmileTherapist2" class="p-0 fa fa-smile-o" aria-hidden="true"></i>
                                             <i id="rateMehTherapist2" class="p-0 fa fa-meh-o" aria-hidden="true"></i>
                                             <i id="rateFrownTherapist2" class="p-0 fa fa-frown-o" aria-hidden="true"></i>
+                                            <i class="p-0 fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                            <i class="p-0 fa fa-thumbs-o-down" aria-hidden="true"></i>
                                         </div>
                                          <ul class="list-group list-group-flush">
                                              <li class="list-group-item">
@@ -446,6 +523,8 @@
                                             <i id="rateSmileTherapist3" class="p-0 fa fa-smile-o" aria-hidden="true"></i>
                                             <i id="rateMehTherapist3" class="p-0 fa fa-meh-o" aria-hidden="true"></i>
                                             <i id="rateFrownTherapist3" class="p-0 fa fa-frown-o" aria-hidden="true"></i>
+                                            <i class="p-0 fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                            <i class="p-0 fa fa-thumbs-o-down" aria-hidden="true"></i>
                                         </div>
                                          <ul class="list-group list-group-flush">
                                              <li class="list-group-item">
@@ -690,6 +769,27 @@
                         </div>
                     </li>
                     <li class="list-group-item">
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="p-0 flex-grow">
+                                <div id="chart4_div"></div>
+                            </div>
+                        </div>
+                    </li>
+                     <li class="list-group-item">
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="p-0 flex-grow">
+                                <div id="chart5_div"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="p-0 flex-grow">
+                                <div id="chart6_div"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
                         <div class="p-1">
                         
                         </div>
@@ -734,6 +834,9 @@
                                 <i id="rateSmileCom1" class="p-0 fa fa-smile-o" aria-hidden="true"></i>
                                 <i id="rateMehCom1" class="p-0 fa fa-meh-o" aria-hidden="true"></i>
                                 <i id="rateFrownCom1" class="p-0 fa fa-frown-o" aria-hidden="true"></i>
+                                <i class="p-0 fa fa-thumbs-o-up" aria-hidden="true"><span class="pl-1">10</span></i>
+                                <i class="p-0 fa fa-thumbs-o-down" aria-hidden="true"><span class="p-1">2</span></i>
+                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                             </div>
                         </div>
                     </li>
@@ -765,6 +868,9 @@
                                 <i id="rateSmileCom2" class="p-0 fa fa-smile-o" aria-hidden="true"></i>
                                 <i id="rateMehCom2" class="p-0 fa fa-meh-o" aria-hidden="true"></i>
                                 <i id="rateFrownCom2" class="p-0 fa fa-frown-o" aria-hidden="true"></i>
+                                <i class="p-0 fa fa-thumbs-o-up" aria-hidden="true"><span class="pl-1">6</span></i>
+                                <i class="p-0 fa fa-thumbs-o-down" aria-hidden="true"><span class="p-1">2</span></i>
+                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                             </div>
                         </div>
                     </li>
@@ -796,6 +902,9 @@
                                 <i id="rateSmileCom3" class="p-0 fa fa-smile-o" aria-hidden="true"></i>
                                 <i id="rateMehCom3" class="p-0 fa fa-meh-o" aria-hidden="true"></i>
                                 <i id="rateFrownCom3" class="p-0 fa fa-frown-o" aria-hidden="true"></i>
+                                <i class="p-0 fa fa-thumbs-o-up" aria-hidden="true"><span class="pl-1">4</span></i>
+                                <i class="p-0 fa fa-thumbs-o-down" aria-hidden="true"><span class="p-1">4</span></i>
+                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                             </div>
                         </div>
                     </li>
