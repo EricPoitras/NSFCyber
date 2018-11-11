@@ -136,6 +136,12 @@ var nsfchat = {
         var iconNotice4 = getDiv("iconNotice4");
         var iconNotice5 = getDiv("iconNotice5");
         
+        var dropdownMenuLinkEvaluationBtn1 = getDiv("dropdownMenuLinkEvaluationBtn1");
+        console.log(dropdownMenuLinkEvaluationBtn1);
+        
+        var Helpful1 = getDiv("Helpful1");
+        var NotHelpful1 = getDiv("NotHelpful1");
+        
         /* Getting icon click events for conversation panel - should we simply list a certain number to use id to get elements content, but allow the user to move up and down discourse moves in a conversation? */
         /* Getting icon click events for responses panel - maybe use another component other than carousel... show and hide cards */
 
@@ -564,6 +570,14 @@ var nsfchat = {
         
         clickMIWiz3.addEventListener("click", function(event){
            nsfchat.LoadAnalyticsResponse3(); 
+        });
+        
+        Helpful1.addEventListener("click", function(event){
+           nsfchat.RateMeHelpful1(); 
+        });
+        
+        NotHelpful1.addEventListener("click", function(event){
+           nsfchat.RateMeNotHelpful1(); 
         });
         
     },
@@ -1362,6 +1376,15 @@ var nsfchat = {
         
         /* Show analytics panel */
         showEl(panelAnalytics);
+    },
+    
+    RateMeHelpful1:function(object){
+        dropdownMenuLinkEvaluationBtn1.textContent = "Helpful"
+        //document.dropdownMenuLinkEvaluationBtn1.innerHTML("<i class='p-0 mx-2 fa fa-thumbs-o-up' aria-hidden='true'></i>Helpful");
+    },
+    RateMeNotHelpful1:function(object){
+        //document.dropdownMenuLinkEvaluationBtn1.innerHTML("<i class='p-0 mx-2 fa fa-thumbs-o-down' aria-hidden='true'></i>Not Helpful");
+        dropdownMenuLinkEvaluationBtn1.textContent = "Not Helpful"
     }
     
     
