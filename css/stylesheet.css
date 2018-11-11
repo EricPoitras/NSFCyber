@@ -128,6 +128,14 @@ h4#username{
     color: green;
 }
 
+.conversationarea .therapist .helpfulratingitem{
+    color: green;
+}
+
+.conversationarea .therapist .nothelpfulratingitem{
+    color: red;
+}
+
 .communityresponsearea i.fa-pencil-square-o{
     color: #007bff;
 }
